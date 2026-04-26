@@ -1,59 +1,88 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowUpRight, Play } from 'lucide-react';
 
 const LinkedinSection = ({ posts, openLink }) => {
   return (
-    <section id="linkedin" className="section-padding">
-      <div className="max-w-7xl mx-auto">
+    <section id="linkedin" className="relative section-padding bg-elevated border-y border-white/5">
+      <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.5 }}
-          className="text-center mb-20"
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.4 }}
+          className="mb-16"
         >
-          <h2 className="section-title">Keep up with my work on Linkedin</h2>
+          <div className="section-eyebrow mb-6">
+            <span>04 — Writing</span>
+          </div>
+          <h2 className="section-title max-w-3xl text-balance">
+            Notes from the field,
+            <br />
+            <span className="text-ink-secondary">on LinkedIn.</span>
+          </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mb-20">
           {posts.map((post, index) => (
-            <motion.div
+            <motion.button
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              onClick={() => openLink(post.link)}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="bg-[#141414] border border-gray-800 rounded-xl flex flex-col hover:border-[#00A9FF] transition-colors duration-300"
+              transition={{ duration: 0.5, delay: index * 0.06 }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="group relative text-left rounded-2xl border border-white/10 bg-panel hover:border-accent/40 hover:bg-[#161616] transition-all duration-300 p-6 flex flex-col h-full"
             >
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold text-white mb-3 flex-grow">{post.title}</h3>
-                <p className="text-gray-400 mb-4 flex-grow">{post.description}</p>
-                <button onClick={() => openLink(post.link)} className="text-[#00A9FF] font-semibold mt-auto flex items-center group">
-                  Read on Linkedin <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
+              <div className="flex items-start justify-between gap-3 mb-4">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted">
+                  Post / {String(index + 1).padStart(2, '0')}
+                </span>
+                <ArrowUpRight className="w-4 h-4 text-ink-muted group-hover:text-accent transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 flex-shrink-0" />
               </div>
-            </motion.div>
+              <h3 className="text-base font-medium text-ink-primary mb-3 tracking-tight leading-snug">
+                {post.title}
+              </h3>
+              <p className="text-sm text-ink-secondary leading-relaxed line-clamp-3 flex-grow">
+                {post.description}
+              </p>
+            </motion.button>
           ))}
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true, amount: 0.5 }}
-          className="text-center"
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="rounded-3xl border border-white/10 bg-panel overflow-hidden"
         >
-          <h3 className="text-3xl font-bold text-white mb-6">Save 5 minutes to watch this Webinar about product accessibility</h3>
-          <div className="aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl shadow-black/50 border border-gray-800">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/vwr9buH1HM0"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+          <div className="grid grid-cols-1 lg:grid-cols-5">
+            <div className="lg:col-span-2 p-8 sm:p-10 flex flex-col justify-between gap-8">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/5 mb-6">
+                  <Play className="w-3 h-3 text-accent" fill="currentColor" />
+                  <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent">
+                    Webinar
+                  </span>
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-medium text-ink-primary tracking-tight text-balance">
+                  5 minutes on{' '}
+                  <span className="text-ink-secondary">product accessibility.</span>
+                </h3>
+              </div>
+              <div className="font-mono text-xs text-ink-muted">5 MIN · YOUTUBE</div>
+            </div>
+            <div className="lg:col-span-3 aspect-video lg:aspect-auto bg-surface">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/vwr9buH1HM0"
+                title="Product accessibility webinar"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </motion.div>
       </div>

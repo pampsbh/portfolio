@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Toaster } from '@/components/ui/toaster';
 
+import ScrollProgress from '@/components/ScrollProgress';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
@@ -11,13 +12,13 @@ import ExperienceSection from '@/components/sections/ExperienceSection';
 import LinkedinSection from '@/components/sections/LinkedinSection';
 import ContactSection from '@/components/sections/ContactSection';
 
-import { 
+import {
   navItems,
   projects,
   experiences,
   highlights,
   linkedinPosts,
-  linkedinUrl
+  linkedinUrl,
 } from '@/data/portfolioData';
 
 function App() {
@@ -39,11 +40,17 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Igor Vilar - Product Designer</title>
-        <meta name="description" content="Product Designer focused on launching successful MVPs. Explore my work in UX/UI design, product metrics, and team leadership." />
+        <title>Igor Vilar — Product Designer</title>
+        <meta
+          name="description"
+          content="Product Designer focused on launching MVPs that move metrics. UI craft, research and data — based in Belo Horizonte."
+        />
+        <meta name="theme-color" content="#0A0A0A" />
       </Helmet>
 
-      <div className="min-h-screen bg-[#0E0E0E] text-[#F2F2F2]">
+      <ScrollProgress />
+
+      <div className="min-h-screen bg-surface text-ink-primary">
         <Header navItems={navItems} scrollToSection={scrollToSection} />
         <main>
           <HeroSection openLink={openLink} linkedinUrl={linkedinUrl} />
@@ -53,7 +60,7 @@ function App() {
           <LinkedinSection posts={linkedinPosts} openLink={openLink} />
           <ContactSection openLink={openLink} handleEmail={handleEmail} linkedinUrl={linkedinUrl} />
         </main>
-        <Footer />
+        <Footer openLink={openLink} handleEmail={handleEmail} linkedinUrl={linkedinUrl} />
         <Toaster />
       </div>
     </>
