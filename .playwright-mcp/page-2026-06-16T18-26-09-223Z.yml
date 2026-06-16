@@ -1,0 +1,66 @@
+- generic [ref=e3]:
+  - link "Back to portfolio" [ref=e5] [cursor=pointer]:
+    - /url: /
+    - img [ref=e6]
+    - text: Back to portfolio
+  - banner [ref=e8]:
+    - generic [ref=e9]: Design System
+    - heading "Estrada Design System" [level=1] [ref=e10]
+    - paragraph [ref=e11]: Um sistema de design token-first para unificar os produtos PJUS
+    - paragraph [ref=e12]: PJUS Investimentos · 2024–2025
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e17]: 01 — Problem
+      - heading "Sem linguagem comum entre produtos" [level=2] [ref=e18]
+      - paragraph [ref=e19]: Antes do Estrada, cada produto PJUS definia seus próprios estilos — botões, cores e tipografia variavam entre sistemas. Isso gerava inconsistência visual para o usuário final e retrabalho constante para devs e designers sem uma linguagem comum.
+    - generic [ref=e20]:
+      - generic [ref=e22]: 02 — Solution
+      - heading "Um sistema unificado, de tokens a componentes" [level=2] [ref=e23]
+      - paragraph [ref=e24]: "Criamos o Estrada DS com arquitetura token-first via Style Dictionary: uma fonte única de verdade para cores, tipografia e espaçamento, compilada automaticamente em CSS custom properties. Os componentes foram construídos como Web Components nativos com Lit 3 — framework-agnostic, consumíveis em qualquer stack da empresa."
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - img [ref=e28]
+          - generic [ref=e32]:
+            - heading "Token-First" [level=3] [ref=e33]
+            - paragraph [ref=e34]: Tokens gerenciados em JSON via Style Dictionary, gerando CSS custom properties automaticamente e sincronizados com o Figma.
+        - generic [ref=e35]:
+          - img [ref=e37]
+          - generic [ref=e41]:
+            - heading "Web Components" [level=3] [ref=e42]
+            - paragraph [ref=e43]: Lit 3 com Shadow DOM — zero dependência de framework. Funcionam em qualquer stack da empresa sem adaptações.
+        - generic [ref=e44]:
+          - img [ref=e46]
+          - generic [ref=e48]:
+            - heading "Developer Experience" [level=3] [ref=e49]
+            - paragraph [ref=e50]: Storybook + Chromatic para documentação viva e testes visuais automatizados em cada PR, eliminando regressões silenciosas.
+      - img "Storybook do Estrada Design System mostrando componentes documentados" [ref=e52]
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - generic [ref=e56]: 15+
+        - generic [ref=e57]: Componentes
+      - generic [ref=e58]:
+        - generic [ref=e59]: 150+
+        - generic [ref=e60]: Ícones
+      - generic [ref=e61]:
+        - generic [ref=e62]: 80+
+        - generic [ref=e63]: Tokens de cor
+      - generic [ref=e64]:
+        - generic [ref=e65]: "5"
+        - generic [ref=e66]: Contribuidores
+    - generic [ref=e67]:
+      - generic [ref=e69]: 03 — Impact
+      - heading "Uma linguagem unificada entre times" [level=2] [ref=e70]
+      - paragraph [ref=e71]: O sistema foi adotado nos produtos internos da PJUS, estabelecendo uma linguagem visual unificada entre times. O pipeline CI/CD com Chromatic detecta regressões visuais automaticamente em PRs, antes de chegar à produção.
+      - list [ref=e72]:
+        - listitem [ref=e73]: Consistência visual entre todos os produtos PJUS
+        - listitem [ref=e75]: Autonomia de devs com componentes framework-agnostic
+        - listitem [ref=e77]: Regressões visuais detectadas automaticamente via Chromatic
+        - listitem [ref=e79]: Pipeline Figma → tokens → código documentado e reproduzível
+  - generic [ref=e82]:
+    - generic [ref=e83]:
+      - paragraph [ref=e84]: Next
+      - paragraph [ref=e85]: More cases coming soon
+    - link "Back to portfolio" [ref=e86] [cursor=pointer]:
+      - /url: /
+      - text: Back to portfolio
+      - img [ref=e87]

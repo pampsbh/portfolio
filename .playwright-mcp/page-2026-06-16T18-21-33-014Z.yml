@@ -1,0 +1,105 @@
+- generic [ref=e3]:
+  - main [ref=e6]:
+    - generic [ref=e8]:
+      - generic [ref=e143]:
+        - button "Change the background of the preview" [ref=e145] [cursor=pointer]:
+          - img [ref=e146]
+        - button "Apply a grid to the preview" [ref=e149] [cursor=pointer]:
+          - img [ref=e150]
+        - button "Apply outlines to the preview" [ref=e152] [cursor=pointer]:
+          - img [ref=e153]
+      - button "Go full screen" [ref=e156] [cursor=pointer]:
+        - img [ref=e157]
+    - generic [ref=e13]:
+      - link "Skip to sidebar" [ref=e159] [cursor=pointer]:
+        - /url: "#instalação-localhost--docs"
+      - iframe [ref=e14]:
+        
+  - navigation [ref=e17]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - link "Skip to canvas" [ref=e23] [cursor=pointer]:
+            - /url: "#storybook-preview-wrapper"
+          - link "Storybook" [ref=e25] [cursor=pointer]:
+            - /url: ./
+            - img "Storybook" [ref=e26]
+          - button "Shortcuts" [ref=e32] [cursor=pointer]:
+            - img [ref=e33]
+        - generic [ref=e36]: Search for components
+        - combobox "Search for components" [ref=e38]:
+          - generic:
+            - img
+          - searchbox "Search for components" [ref=e39]
+          - code: ⌃ K
+          - button "Tag filters" [ref=e43] [cursor=pointer]:
+            - img [ref=e44]
+        - generic [ref=e50]:
+          - img
+          - generic [ref=e51]:
+            - link "Instalação localhost" [ref=e52] [cursor=pointer]:
+              - /url: /?path=/docs/instalação-localhost--docs
+              - img [ref=e54]
+              - text: Instalação localhost
+            - link "Skip to canvas" [ref=e160] [cursor=pointer]:
+              - /url: "#storybook-preview-wrapper"
+          - generic [ref=e56]:
+            - button "Components" [expanded] [ref=e57] [cursor=pointer]:
+              - img [ref=e59]
+              - text: Components
+            - button "Collapse" [ref=e61] [cursor=pointer]:
+              - img [ref=e62]
+          - button "Avatar" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]:
+              - img [ref=e68]
+              - img [ref=e70]
+            - text: Avatar
+          - button "Button" [ref=e73] [cursor=pointer]:
+            - generic [ref=e74]:
+              - img [ref=e76]
+              - img [ref=e78]
+            - text: Button
+          - button "Card" [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]:
+              - img [ref=e84]
+              - img [ref=e86]
+            - text: Card
+          - button "Icons" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]:
+              - img [ref=e92]
+              - img [ref=e94]
+            - text: Icons
+          - button "Images" [ref=e97] [cursor=pointer]:
+            - generic [ref=e98]:
+              - img [ref=e100]
+              - img [ref=e102]
+            - text: Images
+          - button "Loader" [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]:
+              - img [ref=e108]
+              - img [ref=e110]
+            - text: Loader
+          - button "Inputs" [ref=e113] [cursor=pointer]:
+            - generic [ref=e114]:
+              - img [ref=e116]
+              - img [ref=e118]
+            - text: Inputs
+      - generic [ref=e120]:
+        - link "Storybook 10.4 Learn what's new in Storybook" [ref=e163] [cursor=pointer]:
+          - /url: /?path=/settings/whats-new
+          - img [ref=e165]
+          - generic [ref=e167]:
+            - generic "Storybook 10.4" [ref=e168]
+            - generic [ref=e169]: Learn what's new in Storybook
+          - button "Dismiss notification" [ref=e170]:
+            - img [ref=e171]
+        - generic [ref=e122]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: Visual tests
+            - generic [ref=e129]: Git synchronization problem
+          - generic [ref=e134] [cursor=pointer]:
+            - button "Run tests" [ref=e135]:
+              - img [ref=e136]
+              - text: Run tests
+            - button "Collapse testing module" [ref=e140]:
+              - img [ref=e141]

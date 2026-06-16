@@ -1,0 +1,85 @@
+- generic [ref=e3]:
+  - main [ref=e6]:
+    - generic [ref=e10]:
+      - progressbar "Content is loading..." [ref=e12]
+      - iframe [ref=e14]:
+        
+  - navigation [ref=e17]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - link "Skip to canvas" [ref=e23] [cursor=pointer]:
+            - /url: "#storybook-preview-wrapper"
+          - link "Storybook" [ref=e25] [cursor=pointer]:
+            - /url: ./
+            - img "Storybook" [ref=e26]
+          - button "Shortcuts" [ref=e32] [cursor=pointer]:
+            - img [ref=e33]
+        - generic [ref=e36]: Search for components
+        - combobox "Search for components" [ref=e38]:
+          - generic:
+            - img
+          - searchbox "Search for components" [ref=e39]
+          - code: ⌃ K
+          - button "Tag filters" [ref=e43] [cursor=pointer]:
+            - img [ref=e44]
+        - generic [ref=e50]:
+          - img
+          - link "Instalação localhost" [ref=e52] [cursor=pointer]:
+            - /url: /?path=/docs/instalação-localhost--docs
+            - img [ref=e54]
+            - text: Instalação localhost
+          - generic [ref=e56]:
+            - button "Components" [expanded] [ref=e57] [cursor=pointer]:
+              - img [ref=e59]
+              - text: Components
+            - button "Collapse" [ref=e61] [cursor=pointer]:
+              - img [ref=e62]
+          - button "Avatar" [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]:
+              - img [ref=e68]
+              - img [ref=e70]
+            - text: Avatar
+          - button "Button" [ref=e73] [cursor=pointer]:
+            - generic [ref=e74]:
+              - img [ref=e76]
+              - img [ref=e78]
+            - text: Button
+          - button "Card" [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]:
+              - img [ref=e84]
+              - img [ref=e86]
+            - text: Card
+          - button "Icons" [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]:
+              - img [ref=e92]
+              - img [ref=e94]
+            - text: Icons
+          - button "Images" [ref=e97] [cursor=pointer]:
+            - generic [ref=e98]:
+              - img [ref=e100]
+              - img [ref=e102]
+            - text: Images
+          - button "Loader" [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]:
+              - img [ref=e108]
+              - img [ref=e110]
+            - text: Loader
+          - button "Inputs" [ref=e113] [cursor=pointer]:
+            - generic [ref=e114]:
+              - img [ref=e116]
+              - img [ref=e118]
+            - text: Inputs
+      - generic [ref=e122]:
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]: Visual tests
+            - generic [ref=e129]: Login required
+          - button "Start Visual tests" [ref=e131] [cursor=pointer]:
+            - img [ref=e132]
+        - generic [ref=e134] [cursor=pointer]:
+          - button "Run tests" [ref=e135]:
+            - img [ref=e136]
+            - text: Run tests
+          - button "Collapse testing module" [ref=e140]:
+            - img [ref=e141]

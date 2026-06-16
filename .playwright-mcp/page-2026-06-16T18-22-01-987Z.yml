@@ -1,0 +1,226 @@
+- generic [ref=e3]:
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - button "Remount component" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+        - button "Zoom in" [ref=e12] [cursor=pointer]:
+          - img [ref=e13]
+        - button "Zoom out" [ref=e16] [cursor=pointer]:
+          - img [ref=e17]
+        - button "Reset zoom" [ref=e20] [cursor=pointer]:
+          - img [ref=e21]
+        - button "Change the background of the preview" [ref=e135] [cursor=pointer]:
+          - img [ref=e136]
+        - button "Apply a grid to the preview" [ref=e24] [cursor=pointer]:
+          - img [ref=e25]
+        - button "Change the size of the preview" [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+        - button "Enable measure" [ref=e33] [cursor=pointer]:
+          - img [ref=e34]
+        - button "Apply outlines to the preview" [ref=e37] [cursor=pointer]:
+          - img [ref=e38]
+      - generic [ref=e40]:
+        - button "Go full screen" [ref=e41] [cursor=pointer]:
+          - img [ref=e42]
+        - link "Open canvas in new tab" [ref=e44] [cursor=pointer]:
+          - /url: iframe.html?globals=&id=components-button--primary
+          - img [ref=e45]
+        - button "Copy canvas link" [ref=e48] [cursor=pointer]:
+          - img [ref=e49]
+    - generic [ref=e56]:
+      - link "Skip to sidebar" [ref=e57] [cursor=pointer]:
+        - /url: "#components-button--primary"
+      - iframe [ref=e58]:
+        - button "Button" [ref=f3e5]:
+          - generic: Button
+  - navigation [ref=e61]:
+    - generic [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - link "Skip to canvas" [ref=e67] [cursor=pointer]:
+            - /url: "#storybook-preview-wrapper"
+          - link "Storybook" [ref=e69] [cursor=pointer]:
+            - /url: ./
+            - img "Storybook" [ref=e70]
+          - button "Shortcuts" [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+        - generic [ref=e80]: Search for components
+        - combobox "Search for components" [ref=e82]:
+          - generic:
+            - img
+          - searchbox "Search for components" [ref=e83]
+          - code: ⌃ K
+          - button "Tag filters" [ref=e142] [cursor=pointer]:
+            - img [ref=e143]
+        - generic [ref=e145]:
+          - img
+          - link "Instalação localhost" [ref=e147] [cursor=pointer]:
+            - /url: /?path=/docs/instalação-localhost--docs
+            - img [ref=e149]
+            - text: Instalação localhost
+          - generic [ref=e151]:
+            - button "Components" [expanded] [ref=e152] [cursor=pointer]:
+              - img [ref=e154]
+              - text: Components
+            - button "Collapse" [ref=e156] [cursor=pointer]:
+              - img [ref=e157]
+          - button "Avatar" [ref=e160] [cursor=pointer]:
+            - generic [ref=e161]:
+              - img [ref=e163]
+              - img [ref=e165]
+            - text: Avatar
+          - button "Button" [expanded] [ref=e168] [cursor=pointer]:
+            - generic [ref=e169]:
+              - img [ref=e171]
+              - img [ref=e173]
+            - text: Button
+          - link "Docs" [ref=e176] [cursor=pointer]:
+            - /url: /?path=/docs/components-button--docs
+            - img [ref=e178]
+            - text: Docs
+          - generic [ref=e180]:
+            - link "Primary" [ref=e181] [cursor=pointer]:
+              - /url: /?path=/story/components-button--primary
+              - img [ref=e183]
+              - text: Primary
+            - link "Skip to canvas" [ref=e185] [cursor=pointer]:
+              - /url: "#storybook-preview-wrapper"
+          - link "Secondary" [ref=e187] [cursor=pointer]:
+            - /url: /?path=/story/components-button--secondary
+            - img [ref=e189]
+            - text: Secondary
+          - link "Tertiary" [ref=e192] [cursor=pointer]:
+            - /url: /?path=/story/components-button--tertiary
+            - img [ref=e194]
+            - text: Tertiary
+          - link "Disabled" [ref=e197] [cursor=pointer]:
+            - /url: /?path=/story/components-button--disabled
+            - img [ref=e199]
+            - text: Disabled
+          - button "Card" [ref=e202] [cursor=pointer]:
+            - generic [ref=e203]:
+              - img [ref=e205]
+              - img [ref=e207]
+            - text: Card
+          - button "Icons" [ref=e210] [cursor=pointer]:
+            - generic [ref=e211]:
+              - img [ref=e213]
+              - img [ref=e215]
+            - text: Icons
+          - button "Images" [ref=e218] [cursor=pointer]:
+            - generic [ref=e219]:
+              - img [ref=e221]
+              - img [ref=e223]
+            - text: Images
+          - button "Loader" [ref=e226] [cursor=pointer]:
+            - generic [ref=e227]:
+              - img [ref=e229]
+              - img [ref=e231]
+            - text: Loader
+          - button "Inputs" [ref=e234] [cursor=pointer]:
+            - generic [ref=e235]:
+              - img [ref=e237]
+              - img [ref=e239]
+            - text: Inputs
+      - generic [ref=e242]:
+        - link "Storybook 10.4 Learn what's new in Storybook" [ref=e244] [cursor=pointer]:
+          - /url: /?path=/settings/whats-new
+          - img [ref=e246]
+          - generic [ref=e248]:
+            - generic "Storybook 10.4" [ref=e249]
+            - generic [ref=e250]: Learn what's new in Storybook
+          - button "Dismiss notification" [ref=e251]:
+            - img [ref=e252]
+        - generic [ref=e255]:
+          - generic [ref=e259]:
+            - generic [ref=e260]: Visual tests
+            - generic [ref=e262]: Git synchronization problem
+          - generic [ref=e263] [cursor=pointer]:
+            - button "Run tests" [ref=e264]:
+              - img [ref=e265]
+              - text: Run tests
+            - button "Collapse testing module" [ref=e269]:
+              - img [ref=e270]
+  - generic [ref=e108]:
+    - generic [ref=e110]:
+      - tablist [ref=e112]:
+        - tab "Controls 4" [ref=e272] [cursor=pointer]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: Controls
+            - generic [ref=e273]: "4"
+        - tab "Actions" [ref=e117] [cursor=pointer]:
+          - generic [ref=e120]: Actions
+        - tab "Visual tests" [ref=e121] [cursor=pointer]
+      - generic [ref=e124]:
+        - button "Change addon orientation [alt D]" [ref=e125] [cursor=pointer]:
+          - img [ref=e126]
+        - button "Hide addons [alt A]" [ref=e129] [cursor=pointer]:
+          - img [ref=e130]
+    - table [ref=e278]:
+      - rowgroup [ref=e279]:
+        - row "Name Description Default Control" [ref=e280]:
+          - columnheader "Name" [ref=e281]
+          - columnheader "Description" [ref=e282]
+          - columnheader "Default" [ref=e283]
+          - columnheader "Control" [ref=e284]:
+            - generic [ref=e285]:
+              - text: Control
+              - button "Reset controls" [ref=e286] [cursor=pointer]:
+                - img [ref=e287]
+      - rowgroup [ref=e289]:
+        - row "variant Estilo do botão string primary primary" [ref=e290]:
+          - cell "variant" [ref=e291]
+          - cell "Estilo do botão string" [ref=e292]:
+            - generic [ref=e293]: Estilo do botão
+            - generic [ref=e296]: string
+          - cell "primary" [ref=e297]:
+            - generic [ref=e299]: primary
+          - cell "primary" [ref=e300]:
+            - generic [ref=e301]:
+              - img
+              - combobox [ref=e302]:
+                - option "Choose option..." [disabled]
+                - option "primary" [selected]
+                - option "secondary"
+                - option "tertiary"
+                - option "dashed"
+                - option "link"
+        - row "size Tamanho do botão string md md" [ref=e303]:
+          - cell "size" [ref=e304]
+          - cell "Tamanho do botão string" [ref=e305]:
+            - generic [ref=e306]: Tamanho do botão
+            - generic [ref=e309]: string
+          - cell "md" [ref=e310]:
+            - generic [ref=e312]: md
+          - cell "md" [ref=e313]:
+            - generic [ref=e314]:
+              - img
+              - combobox [ref=e315]:
+                - option "Choose option..." [disabled]
+                - option "sm"
+                - option "md" [selected]
+                - option "lg"
+        - row "slot Conteúdo dentro do botão string Button Button" [ref=e316]:
+          - cell "slot" [ref=e317]
+          - cell "Conteúdo dentro do botão string" [ref=e318]:
+            - generic [ref=e319]: Conteúdo dentro do botão
+            - generic [ref=e322]: string
+          - cell "Button" [ref=e323]:
+            - generic [ref=e325]: Button
+          - cell "Button" [ref=e326]:
+            - textbox [ref=e328]:
+              - /placeholder: Edit string...
+              - text: Button
+        - row "disabled Desabilita o botão boolean false disabled" [ref=e329]:
+          - cell "disabled" [ref=e330]
+          - cell "Desabilita o botão boolean" [ref=e331]:
+            - generic [ref=e332]: Desabilita o botão
+            - generic [ref=e335]: boolean
+          - cell "false" [ref=e336]:
+            - generic [ref=e338]: "false"
+          - cell "disabled" [ref=e339]:
+            - generic "disabled" [ref=e340]:
+              - switch "disabled" [ref=e341] [cursor=pointer]
+              - generic [ref=e342] [cursor=pointer]: "False"
+              - generic [ref=e343] [cursor=pointer]: "True"
