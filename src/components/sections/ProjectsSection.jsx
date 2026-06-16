@@ -1,16 +1,16 @@
-import React from ‘react’;
-import { Link } from ‘react-router-dom’;
-import { motion } from ‘framer-motion’;
-import { ArrowUpRight } from ‘lucide-react’;
-import { useToast } from ‘@/components/ui/use-toast’;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
+import { useToast } from '@/components/ui/use-toast';
 
 const ProjectsSection = ({ projects }) => {
   const { toast } = useToast();
 
   const handleNoCase = (project) => {
     toast({
-      title: `${project.title}`,
-      description: "Case study coming soon. Let’s schedule a call on LinkedIn — happy to walk through it.",
+      title: project.title,
+      description: "Case study coming soon. Let's schedule a call on LinkedIn — happy to walk through it.",
     });
   };
 
@@ -26,7 +26,7 @@ const ProjectsSection = ({ projects }) => {
         >
           <div>
             <div className="section-eyebrow mb-6">
-              <span>02 — Selected Work</span>
+              <span>02 &mdash; Selected Work</span>
             </div>
             <h2 className="section-title text-balance max-w-2xl">
               A few products I&apos;ve been
@@ -35,7 +35,7 @@ const ProjectsSection = ({ projects }) => {
             </h2>
           </div>
           <div className="font-mono text-xs text-ink-muted">
-            {String(projects.length).padStart(2, ‘0’)} / {String(projects.length).padStart(2, ‘0’)}
+            {String(projects.length).padStart(2, '0')} / {String(projects.length).padStart(2, '0')}
           </div>
         </motion.div>
 
@@ -57,7 +57,7 @@ const ProjectsSection = ({ projects }) => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-secondary px-2.5 py-1 rounded-full border border-white/15 bg-black/30 backdrop-blur-md">
-                    {String(index + 1).padStart(2, ‘0’)}
+                    {String(index + 1).padStart(2, '0')}
                   </div>
                 </div>
                 <div className="p-6 flex items-start justify-between gap-4">

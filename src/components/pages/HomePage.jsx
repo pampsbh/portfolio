@@ -38,7 +38,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Igor Vilar — Product Designer</title>
+        <title>Igor Vilar - Product Designer</title>
         <meta
           name="description"
           content="Product Designer focused on launching MVPs that move metrics. UI craft, research and data — based in Belo Horizonte."

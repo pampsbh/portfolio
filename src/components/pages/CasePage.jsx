@@ -34,12 +34,11 @@ const CasePage = () => {
   return (
     <>
       <Helmet>
-        <title>{title} — Igor Vilar</title>
+        <title>{title} - Igor Vilar</title>
         <meta name="description" content={subtitle} />
       </Helmet>
 
       <div className="min-h-screen bg-surface text-ink-primary">
-        {/* Back button */}
         <div className="max-w-4xl mx-auto px-6 pt-10 pb-0">
           <Link
             to="/"
@@ -50,7 +49,6 @@ const CasePage = () => {
           </Link>
         </div>
 
-        {/* Header */}
         <motion.header {...fadeUp} className="max-w-4xl mx-auto px-6 pt-12 pb-16">
           <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-accent border border-accent/30 bg-accent/5 px-3 py-1 rounded-full mb-6">
             {category}
@@ -66,12 +64,10 @@ const CasePage = () => {
           </p>
         </motion.header>
 
-        {/* Divider */}
         <div className="border-t border-white/5" />
 
         <main className="max-w-4xl mx-auto px-6">
 
-          {/* Problem */}
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <div className="section-eyebrow mb-6">
               <span>01 — Problem</span>
@@ -84,7 +80,6 @@ const CasePage = () => {
             </p>
           </motion.section>
 
-          {/* Solution */}
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <div className="section-eyebrow mb-6">
               <span>02 — Solution</span>
@@ -96,7 +91,6 @@ const CasePage = () => {
               {solution.text}
             </p>
 
-            {/* Pillars */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-12">
               {solution.pillars.map((pillar) => {
                 const Icon = PILLAR_ICONS[pillar.icon];
@@ -119,7 +113,6 @@ const CasePage = () => {
               })}
             </div>
 
-            {/* Screenshot */}
             {solution.screenshot && (
               <div className="rounded-2xl overflow-hidden border border-white/10 bg-elevated">
                 <img
@@ -132,7 +125,6 @@ const CasePage = () => {
             )}
           </motion.section>
 
-          {/* Metrics */}
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
               {metrics.map((m) => (
@@ -147,7 +139,6 @@ const CasePage = () => {
             </div>
           </motion.section>
 
-          {/* Impact */}
           <motion.section {...fadeUp} className="py-16">
             <div className="section-eyebrow mb-6">
               <span>03 — Impact</span>
@@ -169,7 +160,6 @@ const CasePage = () => {
           </motion.section>
         </main>
 
-        {/* Footer CTA */}
         <div className="border-t border-white/5">
           <div className="max-w-4xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
