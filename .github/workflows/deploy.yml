@@ -24,8 +24,9 @@ jobs:
       - name: Build
         run: npx vite build
 
-      - name: Copy screenshots to dist
-        run: cp -r public/screenshots dist/screenshots
+      - name: Copy public assets to dist
+        run: |
+          [ -d public/screenshots ] && cp -r public/screenshots dist/screenshots || true
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -36,11 +37,3 @@ jobs:
           local-dir: ./dist/
           server-dir: /public_html/
           dangerous-clean-slate: false
-
-      - name: Purge Hostinger CDN cache
-        run: |
-          curl -s -X POST "https://api.hostinger.com/v1/hosting/hpanel/cache/purge" \
-            -H "Authorization: Bearer ${{ secrets.HOSTINGER_API_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"domain": "igorvilar.com.br"}' \
-            || echo "Cache purge skipped (configure HOSTINGER_API_TOKEN secret to enable)"
