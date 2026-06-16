@@ -7,7 +7,7 @@ export const projects = [
     slug: "design-system",
     title: "Estrada Design System",
     description: "Token-first design system unifying all PJUS products. 15+ components, 150+ icons.",
-    image: "https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/f1dd0d5a6f6f82dc89431153641050f5.jpg"
+    image: "/screenshots/estrada-storybook.png"
   },
   {
     slug: null,
@@ -43,7 +43,7 @@ export const cases = [
     },
     approach: {
       heading: 'One source of truth. Zero framework lock-in.',
-      text: 'We built Estrada around a single principle: decisions made once should propagate everywhere automatically. That meant starting with design tokens — not components. Every color, size, and spacing value lives in JSON, processed by Style Dictionary into CSS custom properties. Change a token, and every component updates.\n\nFor components, we chose Web Components with Lit 3. Not because it was trendy — because it was the only option that let any PJUS team consume the system without adopting a new framework. Shadow DOM encapsulation meant styles could not leak. HTML attributes as props meant any codebase could drive the components without a build step.',
+      text: 'We built Estrada around a single principle: decisions made once should propagate everywhere automatically. That meant starting with design tokens — not components. Every color, size, and spacing value lives in JSON, processed by Style Dictionary into CSS custom properties. Change a token, and every component updates.\n\nFor components, we chose Web Components with Lit 3. Not because it was trendy — because it was the only option that let any PJUS team consume the system without adopting a new framework. Shadow DOM encapsulation meant styles could not leak. HTML attributes as props meant any codebase could drive the components without a build step.\n\nWe also introduced a token compliance gate directly in the Azure DevOps pipeline. Before anything reaches the homologation environment, an automated step scans the submitted changes and validates that every visual property references a design token — no hardcoded hex values, no arbitrary spacing, no one-off overrides. If a contribution bypasses the system, the pipeline blocks the deploy and surfaces exactly which properties need to be corrected. This turned the design system from a guideline into an enforceable standard.',
       pillars: [
         {
           icon: 'Layers',
@@ -59,6 +59,11 @@ export const cases = [
           icon: 'Zap',
           title: 'Automated Quality Gates',
           description: 'Storybook documents every state. Chromatic catches visual regressions on every PR before they reach production.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Token Compliance Pipeline',
+          description: 'An Azure DevOps gate scans every PR before HML deploy — blocking any contribution that uses hardcoded values instead of design tokens.',
         },
       ],
       screenshot: '/screenshots/estrada-storybook.png',

@@ -1,0 +1,234 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - button "iv Igor Vilar" [ref=e7] [cursor=pointer]:
+        - generic [ref=e8]: iv
+        - generic [ref=e9]: Igor Vilar
+      - navigation [ref=e10]:
+        - button "About" [ref=e11] [cursor=pointer]
+        - button "Projects" [ref=e12] [cursor=pointer]
+        - button "Experience" [ref=e13] [cursor=pointer]
+        - button "Linkedin" [ref=e14] [cursor=pointer]
+        - button "Contact" [ref=e15] [cursor=pointer]
+      - generic [ref=e20]: Available
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e28]: Available for new opportunities
+        - heading "Designing products that actually ship." [level=1] [ref=e29]:
+          - text: Designing
+          - text: products that
+          - generic [ref=e30]:
+            - generic [ref=e31]: actually
+            - generic [ref=e32]: ship.
+        - paragraph [ref=e34]: Product Designer based in Belo Horizonte, working at the intersection of UI craft, business and data to launch MVPs that move metrics — not just decks.
+        - generic [ref=e35]:
+          - button "View selected work" [ref=e36] [cursor=pointer]:
+            - text: View selected work
+            - img [ref=e37]
+          - button "Get in touch" [ref=e40] [cursor=pointer]:
+            - text: Get in touch
+            - img [ref=e41]
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: R$5M+
+            - generic [ref=e47]: Revenue from MVPs
+          - generic [ref=e48]:
+            - generic [ref=e49]: 8+
+            - generic [ref=e50]: Years in product
+          - generic [ref=e51]:
+            - generic [ref=e52]: 20+
+            - generic [ref=e53]: Products shipped
+          - generic [ref=e54]:
+            - generic [ref=e55]: ∞
+            - generic [ref=e56]: Components in Figma
+      - generic [ref=e57]:
+        - generic [ref=e58]: Scroll
+        - img [ref=e59]
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - generic [ref=e65]: 01 — About
+        - heading "Computer Science background. Designer by craft." [level=2] [ref=e66]:
+          - text: Computer Science background.
+          - text: Designer by craft.
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - paragraph [ref=e69]: I'm a Product Designer with a background in Computer Science and two MBAs. My work sits where research, data and UI overlap — I treat interfaces as products, not screens.
+          - paragraph [ref=e70]: For the last 2 years I've been leading design on a fintech product that buys judicial assets. The product alone generated +R$5M in revenue, and the company crossed R$500M.
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - img [ref=e73]
+              - generic [ref=e76]: UX/UI Design
+            - generic [ref=e77]:
+              - img [ref=e78]
+              - generic [ref=e81]: Product Metrics
+            - generic [ref=e82]:
+              - img [ref=e83]
+              - generic [ref=e86]: Team Leadership
+            - generic [ref=e87]:
+              - img [ref=e88]
+              - generic [ref=e90]: User Journey
+        - generic [ref=e91]:
+          - img "Igor Vilar presenting" [ref=e93]
+          - img "Igor Vilar speaking at an event" [ref=e95]
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e101]: 02 — Selected Work
+          - heading "A few products I've been proud to ship." [level=2] [ref=e102]:
+            - text: A few products I've been
+            - text: proud to ship.
+        - generic [ref=e103]: 04 / 04
+      - generic [ref=e104]:
+        - link "Estrada Design System project showcase 01 Estrada Design System Token-first design system unifying all PJUS products. 15+ components, 150+ icons." [ref=e105] [cursor=pointer]:
+          - /url: /case/design-system
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - img "Estrada Design System project showcase" [ref=e108]
+              - generic [ref=e110]: "01"
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - heading "Estrada Design System" [level=3] [ref=e113]
+                - paragraph [ref=e114]: Token-first design system unifying all PJUS products. 15+ components, 150+ icons.
+              - img [ref=e116]
+        - button "Bosch APP Fleet project showcase 02 Bosch APP Fleet Bosch offers several mobile applications for managing vehicle fleets" [ref=e119] [cursor=pointer]:
+          - generic [ref=e120]:
+            - generic [ref=e121]:
+              - img "Bosch APP Fleet project showcase" [ref=e122]
+              - generic [ref=e124]: "02"
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - heading "Bosch APP Fleet" [level=3] [ref=e127]
+                - paragraph [ref=e128]: Bosch offers several mobile applications for managing vehicle fleets
+              - img [ref=e130]
+        - button "Unimed project showcase 03 Unimed Virtual card, exam results, accredited network, information about the plan and allows you to request authorizations and issue invoices, among other features." [ref=e133] [cursor=pointer]:
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - img "Unimed project showcase" [ref=e136]
+              - generic [ref=e138]: "03"
+            - generic [ref=e139]:
+              - generic [ref=e140]:
+                - heading "Unimed" [level=3] [ref=e141]
+                - paragraph [ref=e142]: Virtual card, exam results, accredited network, information about the plan and allows you to request authorizations and issue invoices, among other features.
+              - img [ref=e144]
+        - button "Nubank Underserved project showcase 04 Nubank Underserved Research carried out for nubank in 2022 to learn about another targeted audience" [ref=e147] [cursor=pointer]:
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - img "Nubank Underserved project showcase" [ref=e150]
+              - generic [ref=e152]: "04"
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - heading "Nubank Underserved" [level=3] [ref=e155]
+                - paragraph [ref=e156]: Research carried out for nubank in 2022 to learn about another targeted audience
+              - img [ref=e158]
+    - generic [ref=e162]:
+      - generic [ref=e163]:
+        - generic [ref=e165]: 03 — Experience
+        - heading "Eight years across product, research and leadership." [level=2] [ref=e166]:
+          - text: Eight years across product,
+          - text: research and leadership.
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e169]: 2022 – Present
+          - generic [ref=e170]:
+            - generic [ref=e171]:
+              - heading "PJUS" [level=3] [ref=e172]
+              - generic [ref=e173]: ·
+              - generic [ref=e174]: Lead Product Designer
+            - paragraph [ref=e175]: Allocated in PJUS, a company that buys judicial assets. I have developed most of the digital products.
+        - generic [ref=e176]:
+          - generic [ref=e177]: 2020 – 2022
+          - generic [ref=e178]:
+            - generic [ref=e179]:
+              - heading "Sensix" [level=3] [ref=e180]
+              - generic [ref=e181]: ·
+              - generic [ref=e182]: Design Team Lead
+            - paragraph [ref=e183]: Conducting product redesign, developing metrics, defining the UX team's OKRs, defining and validating hypotheses through quantitative and qualitative research.
+        - generic [ref=e184]:
+          - generic [ref=e185]: Earlier Roles
+          - generic [ref=e186]:
+            - generic [ref=e187]:
+              - heading "Consultancies & Agencies" [level=3] [ref=e188]
+              - generic [ref=e189]: ·
+              - generic [ref=e190]: Product Designer
+            - paragraph [ref=e191]: MVP construction, prototyping, delivering wireframes and conducting meetings with IT.
+    - generic [ref=e193]:
+      - generic [ref=e194]:
+        - generic [ref=e196]: 04 — Writing
+        - heading "Notes from the field, on LinkedIn." [level=2] [ref=e197]:
+          - text: Notes from the field,
+          - text: on LinkedIn.
+      - generic [ref=e198]:
+        - button "Post / 01 PJUS Brasil Opportunity Yesterday at PJUS Brasil, I had the opportunity to talk a little about my journey and my work as a Product Designer..." [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]:
+            - generic [ref=e201]: Post / 01
+            - img [ref=e202]
+          - heading "PJUS Brasil Opportunity" [level=3] [ref=e205]
+          - paragraph [ref=e206]: Yesterday at PJUS Brasil, I had the opportunity to talk a little about my journey and my work as a Product Designer...
+        - button "Post / 02 Jakob's Law in UX Do you know Jakob's Law? It states that users prefer your site to work the same way as all the other sites they already know..." [ref=e207] [cursor=pointer]:
+          - generic [ref=e208]:
+            - generic [ref=e209]: Post / 02
+            - img [ref=e210]
+          - heading "Jakob's Law in UX" [level=3] [ref=e213]
+          - paragraph [ref=e214]: Do you know Jakob's Law? It states that users prefer your site to work the same way as all the other sites they already know...
+        - button "Post / 03 Petz App Redesign Study A case study on redesigning the Petz app, focusing on improving user experience and interface design." [ref=e215] [cursor=pointer]:
+          - generic [ref=e216]:
+            - generic [ref=e217]: Post / 03
+            - img [ref=e218]
+          - heading "Petz App Redesign Study" [level=3] [ref=e221]
+          - paragraph [ref=e222]: A case study on redesigning the Petz app, focusing on improving user experience and interface design.
+        - button "Post / 04 The Importance of UX Metrics Discussing the relevance of UX metrics for product success and data-driven design decisions." [ref=e223] [cursor=pointer]:
+          - generic [ref=e224]:
+            - generic [ref=e225]: Post / 04
+            - img [ref=e226]
+          - heading "The Importance of UX Metrics" [level=3] [ref=e229]
+          - paragraph [ref=e230]: Discussing the relevance of UX metrics for product success and data-driven design decisions.
+        - button "Post / 05 UX Research & Redesign Insights from a UX research project that led to a successful product redesign." [ref=e231] [cursor=pointer]:
+          - generic [ref=e232]:
+            - generic [ref=e233]: Post / 05
+            - img [ref=e234]
+          - heading "UX Research & Redesign" [level=3] [ref=e237]
+          - paragraph [ref=e238]: Insights from a UX research project that led to a successful product redesign.
+      - generic [ref=e240]:
+        - generic [ref=e241]:
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - img [ref=e244]
+              - generic [ref=e246]: Webinar
+            - heading "5 minutes on product accessibility." [level=3] [ref=e247]
+          - generic [ref=e248]: 5 MIN · YOUTUBE
+        - iframe [ref=e250]:
+          
+    - generic [ref=e252]:
+      - generic [ref=e253]:
+        - generic [ref=e255]: 05 — Contact
+        - heading "Got a brief? Let's build it." [level=2] [ref=e256]:
+          - text: Got a brief?
+          - text: Let's build it.
+        - paragraph [ref=e257]: I'm open to senior product / UI roles, freelance, and consulting on MVPs.
+      - generic [ref=e258]:
+        - button "LinkedIn Message me directly" [ref=e259] [cursor=pointer]:
+          - generic [ref=e260]:
+            - img [ref=e261]
+            - img [ref=e265]
+          - generic [ref=e268]: LinkedIn
+          - generic [ref=e269]: Message me directly
+        - button "Email igorvilaralmeida@gmail.com" [ref=e270] [cursor=pointer]:
+          - generic [ref=e271]:
+            - img [ref=e272]
+            - img [ref=e275]
+          - generic [ref=e278]: Email
+          - generic [ref=e279]: igorvilaralmeida@gmail.com
+  - contentinfo [ref=e280]:
+    - generic [ref=e282]:
+      - generic [ref=e283]:
+        - generic [ref=e284]: iv
+        - generic [ref=e285]: — Igor Vilar · Product Designer
+      - generic [ref=e286]:
+        - button "LinkedIn" [ref=e287] [cursor=pointer]:
+          - img [ref=e288]
+        - button "Email" [ref=e292] [cursor=pointer]:
+          - img [ref=e293]
+      - generic [ref=e296]: © 2026 — Belo Horizonte / Brasil
+  - region "Notifications (F8)":
+    - list

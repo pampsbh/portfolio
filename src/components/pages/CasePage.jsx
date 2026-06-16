@@ -2,10 +2,10 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { ArrowLeft, ArrowUpRight, Layers, Code2, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Layers, Code2, Zap, ShieldCheck } from 'lucide-react';
 import { cases } from '@/data/portfolioData';
 
-const PILLAR_ICONS = { Layers, Code2, Zap };
+const PILLAR_ICONS = { Layers, Code2, Zap, ShieldCheck };
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -89,7 +89,7 @@ const CasePage = () => {
               <p key={i} className="text-ink-secondary leading-relaxed text-base max-w-2xl mb-4 last:mb-0">{para}</p>
             ))}
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-12 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-12 mb-12">
               {approach.pillars.map((pillar) => {
                 const Icon = PILLAR_ICONS[pillar.icon];
                 return (

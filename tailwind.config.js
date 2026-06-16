@@ -29,7 +29,7 @@ module.exports = {
         ink: {
           primary: '#F5F5F5',
           secondary: '#A3A3A3',
-          muted: '#525252',
+          muted: '#737373',
         },
       },
       letterSpacing: {
