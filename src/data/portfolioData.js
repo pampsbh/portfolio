@@ -40,6 +40,12 @@ export const projects = [
     image: "/screenshots/alaska/home.png"
   },
   {
+    slug: "vli-desembarque",
+    title: "VLI — Smart Ship Disembarkation",
+    description: "Port operations platform for VLI Logística. Multi-step ship registration, voyage management, and disembarkation simulation.",
+    image: "/screenshots/desembarque/navio.png"
+  },
+  {
     slug: null,
     title: "Nubank Underserved",
     description: "Research carried out for nubank in 2022 to learn about another targeted audience",
@@ -526,6 +532,90 @@ export const cases = [
         'Under 100 downloads due to insufficient marketing investment',
         'Design hypothesis (education → acquisition) was valid but never fully tested at scale',
         'Key learning: distribution is a design problem too',
+      ],
+    },
+  },
+  {
+    slug: 'vli-desembarque',
+    category: 'Enterprise UX',
+    title: 'VLI — Smart Ship Disembarkation',
+    subtitle: 'A port operations platform for VLI Logística — turning a paper-based ship disembarkation process into a structured digital system for port engineers.',
+    company: 'VLI Logística',
+    period: '2019',
+    challenge: {
+      heading: 'Designing for a domain with no room for error.',
+      text: 'VLI Logística operates one of Brazil\'s largest rail and port logistics networks. In 2019, the process of managing ship disembarkation at their terminals relied on manual calculations, spreadsheets, and physical documentation. Port engineers needed to register technical ship data — cargo hold positions, ballast tanks, hydrostatic tables — before each voyage, then run stability simulations to plan safe unloading sequences.\n\nThe UX challenge was significant: the users were engineers and port operators with deep domain expertise but limited tolerance for software that got in their way. Every field mapped to a real technical measurement. Errors in data entry could affect ship stability calculations. The design had to be precise, trustworthy, and fast — not approachable or friendly, but reliable and clear.',
+    },
+    approach: {
+      heading: 'Structure over simplicity.',
+      text: 'For consumer products, the goal is to reduce cognitive load. For precision industrial tools, the goal is to surface the right information at the right moment — not to hide complexity, but to sequence it intelligently.\n\nThe ship registration flow was designed as a 4-step wizard: basic details, cargo holds (porões), ballast tanks, and the hydrostatic table. Each step has a visible progress indicator and breadcrumb trail so engineers always know exactly where they are in the process. The data only advances when complete — preventing partial records that could corrupt simulation inputs.\n\nThe simulation module — the most complex feature — opens with a tutorial prompt. For first-time users, the system proactively offers guidance before they interact with technical parameters. This was a deliberate onboarding decision for a feature where mistakes have operational consequences.',
+      pillars: [
+        {
+          icon: 'Layers',
+          title: 'Stepped Wizard Registration',
+          description: 'Ship registration is split into 4 sequential steps with a dot-based progress indicator. Each step is a focused form — one concern at a time. Users cannot skip ahead, preventing incomplete records from entering the simulation engine.',
+        },
+        {
+          icon: 'Zap',
+          title: 'Breadcrumb Navigation',
+          description: 'Every nested screen shows a breadcrumb trail: Home > Navios > Novo Navio > Porões. In a system with ships, voyages, ports, berths, and products as separate entities, spatial orientation is critical. Users always know where they are and how to get back.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Proactive Tutorial on Simulation',
+          description: 'The simulation screen — where engineers run disembarkation stability calculations — opens with a tutorial prompt before any interaction. This is contextual onboarding for the most consequential feature, offered exactly when it is needed.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Clean Information Architecture',
+          description: 'The sidebar navigation maps directly to the operational entities: Ships, Voyages, Ports & Berths, Products. No feature-based grouping, no dashboards — just the five objects port operators think about every day, accessible in one click from anywhere in the system.',
+        },
+      ],
+      screenshot: '/screenshots/desembarque/navio.png',
+      screenshotAlt: 'VLI Desembarque — new ship registration form step 1',
+    },
+    screens: [
+      {
+        title: 'Ship Registration — Step 1',
+        description: 'The first step of the 4-step wizard collects the ship\'s core technical parameters: name, number of cargo holds, longitudinal position of midship, quantity of ballast tanks, and hydrostatic table lines. The progress indicator (1/4) and "Próximo passo: Forbes" preview set expectations for what comes next.',
+        image: '/screenshots/desembarque/navio.png',
+      },
+      {
+        title: 'Ship Registration — Cargo Holds',
+        description: 'Step 2 registers each porão (cargo hold) with its longitudinal position and distance. The grid layout mirrors how engineers think about holds — numbered sequentially across the ship. Individual checkboxes allow holds to be activated or deactivated, reflecting real operational configurations.',
+        image: '/screenshots/desembarque/poroes.png',
+      },
+      {
+        title: 'Voyage — Initial Ship Condition',
+        description: 'The final step of voyage registration captures the ship\'s initial hydrostatic condition: Displacement, MTC (Moment to Change Trim), and LCS (Longitudinal Center of Buoyancy). These three values define the ship\'s stability state before unloading begins — the foundation of the entire simulation.',
+        image: '/screenshots/desembarque/escalas.png',
+      },
+      {
+        title: 'Simulation — Contextual Tutorial',
+        description: 'Before entering the simulation, the system asks if the user wants a tutorial. This is not a mandatory onboarding flow — it is an opt-in prompt surfaced at the exact moment the user needs it. Engineers who know the system can skip it; first-time users get guided. The distinction matters in a precision tool.',
+        image: '/screenshots/desembarque/simulacao.png',
+      },
+      {
+        title: 'Ship Search',
+        description: 'An inline search with autocomplete suggestions allows operators to quickly locate registered ships. The "Limpar pesquisa" action is visible and persistent — important in a system where fast context-switching between ships and voyages is routine.',
+        image: '/screenshots/desembarque/pesquisa.png',
+      },
+    ],
+    metrics: [
+      { value: '2019', label: 'Year shipped' },
+      { value: '4', label: 'Core modules' },
+      { value: '5', label: 'Entity types' },
+      { value: 'B2B', label: 'Enterprise tool' },
+    ],
+    impact: {
+      heading: 'Paper to platform.',
+      text: 'The VLI Desembarque platform replaced a manual, document-based process with a structured digital system for registering ships, managing voyages, and running disembarkation simulations. Port engineers gained a single source of truth for ship technical data — replacing spreadsheets and physical forms that had to be recreated for each voyage.\n\nThis was an enterprise UX project in a domain with no established patterns and no room for user error. The design outcome was a system that matched the mental model of experienced port engineers — not a simplified interface, but a well-organized one.',
+      bullets: [
+        'Replaced manual paper-based process with structured digital workflows',
+        'Multi-step wizard prevents incomplete or invalid ship data from entering the simulation',
+        'Contextual onboarding for the simulation module reduces errors on first use',
+        'Clean information architecture mirrors how port operators think about their work',
+        'Built for a highly specialized domain with zero precedent in digital tooling',
       ],
     },
   }
