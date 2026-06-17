@@ -8,6 +8,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
+import ClientsSection from '@/components/sections/ClientsSection';
 import LinkedinSection from '@/components/sections/LinkedinSection';
 import ContactSection from '@/components/sections/ContactSection';
 import {
@@ -52,6 +53,7 @@ const HomePage = () => {
         <Header navItems={navItems} scrollToSection={scrollToSection} />
         <main>
           <HeroSection openLink={openLink} linkedinUrl={linkedinUrl} />
+          <ClientsSection />
           <AboutSection highlights={highlights} />
           <ProjectsSection projects={projects} />
           <ExperienceSection experiences={experiences} />
