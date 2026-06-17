@@ -52,6 +52,12 @@ export const projects = [
     image: "/screenshots/fieldscan/zonas-populado.png"
   },
   {
+    slug: "tm1",
+    title: "TM1 — Virtual Events Platform",
+    description: "White-label virtual event platform designed during the pandemic. Live streaming, Virtual Expo, networking, and mobile-first countdown. Responsive across desktop and mobile.",
+    image: "/screenshots/tm1/400-feature.png"
+  },
+  {
     slug: null,
     title: "Nubank Underserved",
     description: "Research carried out for nubank in 2022 to learn about another targeted audience",
@@ -731,6 +737,100 @@ export const cases = [
         'Zonas de Manejo: polygon-based zone management directly on satellite maps',
         'CEA: new soil conductivity analysis map type integrated into existing workflow',
         '9-component styleguide produced to enforce consistency found missing in the audit',
+      ],
+    },
+  },
+  {
+    slug: 'tm1',
+    category: 'Product Design',
+    title: 'TM1 — Virtual Events Platform',
+    subtitle: 'A white-label virtual event platform designed during the pandemic — combining live streaming, virtual expo, networking, and content delivery in a single branded experience.',
+    company: 'TM1',
+    period: '2020',
+    challenge: {
+      heading: 'When physical events became impossible overnight.',
+      text: '2020 forced every company with an annual conference, town hall, or industry event to answer the same question at the same time: where do we go now? The market was flooded with video call tools that could handle meetings, but nothing that could replicate the full experience of a live event — the hallway conversations, the expo floor, the branded stage, the materials library, the networking over coffee.\n\nTM1 was designed to fill that gap: a white-label platform that any company could deploy with their own branding, giving their event a proper digital home instead of a Zoom link. The first client, VPS Vale, had their countdown live at vpsvale2020.com — an "Encontro VPS" conference with hundreds of attendees from Brazil, Chile, Uruguay, India, Germany, and beyond.\n\nThe UX challenge was scope: six distinct modules (Streaming, Virtual Expo, Agenda, Materiais, Coffee, Help) had to feel like a single coherent experience on both desktop and mobile — under pandemic timelines.',
+    },
+    approach: {
+      heading: 'One platform. Six experiences. One navigation.',
+      text: 'The core design decision was the navigation bar. With six modules in scope, the top navigation became the spine of the product — Transmissão, Virtual Expo, Agenda, Materiais, Coffee, and profile. Each module is a distinct experience, but the navigation creates the sense of moving through a single event, not switching between separate tools.\n\nThe dark theme was deliberate: a black background makes streaming video look like a real broadcast, not a screen recording. It elevates the perceived production value of the event and keeps the attendee\'s attention on the content, not the interface.\n\nFor mobile, the countdown screen before event start — showing days, hours, minutes, and seconds in full-screen green typography — served as both a teaser and a brand moment. Attendees bookmarked the URL and returned when the counter hit zero.',
+      pillars: [
+        {
+          icon: 'Zap',
+          title: 'Live Streaming with Onboarding',
+          description: 'The streaming screen opens with a personalized welcome modal — "Boas-vindas, [Seu Nome]!" — offering a tutorial video before the event begins. This reduced support requests by onboarding users proactively in the moment they arrived, before the stream started.',
+        },
+        {
+          icon: 'Layers',
+          title: 'Virtual Expo — Map + Discover',
+          description: 'The Virtual Expo screen combined an interactive world map showing participant locations, an expo booth viewer, wallpaper downloads, Photo Opp QR codes, and a Word Cloud — all in one scrollable canvas. On the right: a real-time "Descobrir" panel to find and connect with other attendees by name or interest.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Coffee — Virtual Networking',
+          description: 'The Coffee module brought the hallway conversation online. Attendees could browse other participants, filter by interest, and initiate one-on-one or small group conversations. The metaphor of coffee was intentional — informal, low-stakes, time-limited. Not a meeting. A coffee.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Mobile-First Countdown',
+          description: 'Before the event, the mobile experience was a full-screen countdown timer — 99 days, 23 hours, 59 minutes — with the event hashtag and social links. This was the first touchpoint for most mobile attendees: a branded, shareable teaser that drove social sharing before the event even started.',
+        },
+      ],
+      screenshot: '/screenshots/tm1/800.png',
+      screenshotAlt: 'TM1 Virtual Expo screen — participant world map, expo booth, Photo Opp and Word Cloud',
+    },
+    screens: [
+      {
+        title: 'Landing Page',
+        description: '"Boas-vindas à nova era de eventos." The landing page uses concert photography to signal that this is not a webinar — it is an event. The tagline and CTA set the tone before the user logs in. The TM1 logo in the center, minimal copy, and full-bleed imagery create a theatrical entrance.',
+        image: '/screenshots/tm1/000-cover.png',
+      },
+      {
+        title: 'Access & Registration',
+        description: 'A minimal email-based entry point. "Vamos começar?" keeps the tone conversational. The split layout — form on black left, event photography on right — maintains the event atmosphere even at the login gate. No password friction for returning users.',
+        image: '/screenshots/tm1/100-lobby.png',
+      },
+      {
+        title: 'Live Stream — Welcome Modal',
+        description: 'On first access, a personalized modal greets the attendee by name and offers a platform tutorial. This was a proactive support decision: the tutorial surfaces exactly when users need it (first arrival) and disappears after — never shown again. The event stage is visible behind the modal, building anticipation.',
+        image: '/screenshots/tm1/300-stream.png',
+      },
+      {
+        title: 'Live Streaming View',
+        description: 'The streaming screen is full-width video with minimal controls — the event is the focus. Below the player: a live attendee bar showing participants from Brazil, Chile, Uruguay, Spain, India, Germany. This social presence signal — seeing real names and countries — makes a remote event feel attended, not broadcast.',
+        image: '/screenshots/tm1/400-feature.png',
+      },
+      {
+        title: 'Virtual Expo — Full Experience',
+        description: 'The expo screen is the most complex: a world map with participant pins (105 from Brazil alone), an expo booth with VPS branding, wallpaper downloads, a Photo Opp QR code, and a Word Cloud prompt — all on the left canvas. The right panel is a live directory of attendees with name search and interest filters. This is a virtual event floor.',
+        image: '/screenshots/tm1/800.png',
+      },
+      {
+        title: 'Help Center',
+        description: 'A full-text search help center with FAQ accordion ("O que é a plataforma?", "O que posso fazer?", "Quem pode assistir?"). The "Powered by TM1" footer makes the white-label architecture visible. The persistent green "Ajuda" FAB ensures support is always one tap away from any screen in the platform.',
+        image: '/screenshots/tm1/1000.png',
+      },
+      {
+        title: 'Mobile — Countdown',
+        description: 'The pre-event mobile screen is a full-screen countdown in oversized green typography: 99 days, 23 hours, 59 minutes, 59 seconds. The hashtag #encontrovps and social links below turn the waiting period into a sharing moment. This screen lived at vpsvale2020.com — a branded URL that worked as a campaign asset before the event.',
+        image: '/screenshots/tm1/mobile-110.png',
+      },
+    ],
+    metrics: [
+      { value: '6', label: 'Modules designed' },
+      { value: '2020', label: 'Pandemic-era launch' },
+      { value: '100%', label: 'Responsive' },
+      { value: 'White-label', label: 'Multi-tenant' },
+    ],
+    impact: {
+      heading: 'A full event experience, not a video call.',
+      text: 'TM1 launched as a white-label platform during the peak of the pandemic events crisis. The first deployment — VPS Vale\'s annual conference — brought together attendees from six countries on a branded platform purpose-built for the event, not retrofitted from a meeting tool.\n\nThe product covered the full event lifecycle: countdown and anticipation before, live streaming and networking during, and materials and recordings after. The "Powered by TM1" architecture meant each new client got a branded experience without starting from scratch.\n\nDesigning a platform of this scope — six distinct modules, desktop and mobile, white-label architecture — required holding the full product in mind simultaneously. Every decision in one module had implications for navigation, visual hierarchy, and brand adaptability across all others.',
+      bullets: [
+        'Six modules in a single coherent navigation: Streaming, Virtual Expo, Agenda, Materiais, Coffee, Help',
+        'White-label architecture: each client event gets a fully branded deployment',
+        'Participant presence signals (live names, countries) made remote events feel attended',
+        'Mobile countdown created a pre-event sharing moment before the platform even launched',
+        'Dark theme elevated streaming content — interface recedes, event takes center stage',
       ],
     },
   }
