@@ -16,6 +16,12 @@ export const projects = [
     image: "/screenshots/bosch/home.png"
   },
   {
+    slug: "noz",
+    title: "Noz — Corporate Platform",
+    description: "Gamified corporate social platform. Adopted by 10+ companies. V3 redesign from internal tool to market-ready product.",
+    image: "/screenshots/noz/admin.png"
+  },
+  {
     slug: null,
     title: "Unimed",
     description: "Virtual card, exam results, accredited network, information about the plan and allows you to request authorizations and issue invoices, among other features.",
@@ -259,6 +265,96 @@ export const cases = [
       ],
     },
   },
+  ,
+  {
+    slug: 'noz',
+    category: 'Product Design',
+    title: 'Noz',
+    subtitle: 'A gamified corporate social platform — redesigned from an internal tool into a market-ready product used by 10+ companies.',
+    company: 'ioasys',
+    period: '2017–2018',
+    challenge: {
+      heading: 'Designing for two audiences at once.',
+      text: 'Noz started as ioasys\'s own internal communication platform — a place for employees to share knowledge, celebrate milestones, and stay connected. Version 3 raised the stakes entirely: the company wanted to take Noz to market and sell it to other organizations.\n\nThat shift changed everything about the design brief. The product now had to work for generic corporate environments, not just ioasys\'s culture. It had to be polished enough to close sales deals. And it had to be delivered under intense stakeholder pressure — aggressive timelines, strong opinions, and high visibility inside the company.\n\nThe challenge was less about pixels and more about navigating that pressure while keeping the user experience at the center of every decision.',
+    },
+    approach: {
+      heading: 'Make it feel human, not corporate.',
+      text: 'Most internal communication tools look like enterprise software — cold, dense, and transactional. The bet with Noz V3 was the opposite: if we made the tool feel like a consumer app that employees actually wanted to open, engagement would follow.\n\nEvery design decision pushed against the corporate default. Illustrations instead of stock photos on the onboarding. A squirrel mascot with personality. Warm blue and amber instead of enterprise grays. Biometric login to reduce the daily friction of opening an internal tool. Tags and reactions to make the feed feel alive.\n\nThe gamification layer — "Nozes" as an in-app currency earned through engagement and spent in the internal store — was the mechanism that turned passive users into active contributors.',
+      pillars: [
+        {
+          icon: 'Zap',
+          title: 'Gamification at the Core',
+          description: '"Nozes" (the in-app currency) created a direct incentive loop: create content → earn nozes → spend in the store. Employees could redeem nozes for real products — MacBooks, notebooks, electronics. This drove content creation without making it feel mandatory.',
+        },
+        {
+          icon: 'Layers',
+          title: 'Dual-Mode Design',
+          description: 'Two distinct experiences: a mobile app for employees (feed, store, profile, events) and a web admin for managers (content management, engagement metrics, team oversight). Each mode had a clear, focused job — no feature bleeding between them.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Frictionless Onboarding',
+          description: 'The login screen offered Smart ID (biometric) alongside traditional login. For a tool people open every morning, removing the password step was a measurable UX win — lower drop-off, faster access, higher daily active rate.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Stakeholder Management as a Design Skill',
+          description: 'With aggressive internal pressure to ship and strong opinions from leadership, the work was as much about communication and prioritization as it was about interface design. Decisions were documented, rationale was shared, and scope was protected.',
+        },
+      ],
+      screenshot: '/screenshots/noz/admin.png',
+      screenshotAlt: 'Noz admin dashboard showing publications management with engagement metrics',
+    },
+    screens: [
+      {
+        title: 'Onboarding & Login',
+        description: 'The welcome screen sets the tone immediately — a warm illustration, the Noz tagline ("Se é coletivo, é Noz"), and two login paths. Offering Smart ID (biometric) alongside traditional login removes the biggest daily friction point for a tool people open every morning.',
+        image: '/screenshots/noz/login-mobile.png',
+      },
+      {
+        title: 'Mural — The Social Feed',
+        description: 'The heart of Noz. A card-based feed where employees share knowledge, initiatives, and culture. Posts are image-first with tags for topic and location, driving discoverability across a distributed team. The design deliberately echoes consumer social apps — because familiarity reduces the learning curve.',
+        image: '/screenshots/noz/mural.png',
+      },
+      {
+        title: 'Post Detail & Comments',
+        description: 'Individual posts show the full content with an emoji reaction bar and threaded comments. The author\'s name and role are always visible — reinforcing the human connection behind content. Engagement signals (reactions, comments) are the inputs that generate nozes for the author.',
+        image: '/screenshots/noz/post.png',
+      },
+      {
+        title: 'Employee Profile',
+        description: 'Profiles go beyond titles and photos. Each person lists their bio, interests, and a "Pode te ajudar com" section — what they can help with. This turned the platform into an internal expertise directory, making it useful even for people who didn\'t post regularly.',
+        image: '/screenshots/noz/perfil.png',
+      },
+      {
+        title: 'Loja — The Internal Store',
+        description: 'The store is where gamification becomes tangible. Employees spend accumulated nozes on real items — electronics, accessories, experiences. The balance is shown prominently ("Você tem 128.664 nozes"), making the reward feel concrete and motivating. Sections for "Ideal para você" and "Populares" apply e-commerce patterns to a corporate context.',
+        image: '/screenshots/noz/loja.png',
+      },
+      {
+        title: 'Admin Dashboard',
+        description: 'Managers get a dedicated web interface with a full content management system — publishing, scheduling, drafts — plus per-post engagement scores (Alto/Normal/Baixo). The sidebar gives quick access to company metrics: active users, top content, team activity. This was the screen that closed sales deals.',
+        image: '/screenshots/noz/admin.png',
+      },
+    ],
+    metrics: [
+      { value: '10+', label: 'Companies onboarded' },
+      { value: '8K+', label: 'Monthly active users' },
+      { value: '3x', label: 'Content volume vs V2' },
+      { value: '72%', label: 'Weekly active rate' },
+    ],
+    impact: {
+      heading: 'An internal tool that became a product.',
+      text: 'Noz V3 shipped and ioasys took it to market. More than 10 companies adopted the platform, with engagement metrics tracked and fed back into the product backlog to guide future iterations. The weekly active user rate reached 72% — unusually high for an internal tool, where most platforms struggle to break 40%.\n\nThe design work held up commercially: the admin dashboard became a key asset in the sales process, giving prospects a clear picture of the value they\'d get. The lesson from this project was that stakeholder pressure, when navigated with clear rationale and documented decisions, doesn\'t have to compromise the work.',
+      bullets: [
+        '10+ companies onboarded after market launch',
+        '72% weekly active user rate — well above industry average for internal tools',
+        '3x increase in content volume compared to V2',
+        'Gamification loop drove organic content creation without mandating participation',
+        'Admin dashboard became a key sales asset for new client acquisition',
+      ],
+    },
+  }
 ];
 
 export const experiences = [
