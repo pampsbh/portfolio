@@ -46,6 +46,12 @@ export const projects = [
     image: "/screenshots/desembarque/navio.png"
   },
   {
+    slug: "fieldscan",
+    title: "Sensix — Fieldscan",
+    description: "AgriTech precision agriculture platform. Heuristic evaluation + 2 new features designed: Management Zones and CEA mapping.",
+    image: "/screenshots/fieldscan/zonas-populado.png"
+  },
+  {
     slug: null,
     title: "Nubank Underserved",
     description: "Research carried out for nubank in 2022 to learn about another targeted audience",
@@ -631,6 +637,100 @@ export const cases = [
         'Multi-step wizard with forward gates prevents invalid simulation inputs',
         'Five interconnected entity types managed in a single coherent system',
         'Systematic UX audit cataloged and resolved visual inconsistencies before launch',
+      ],
+    },
+  },
+  {
+    slug: 'fieldscan',
+    category: 'Product Design',
+    title: 'Sensix — Fieldscan',
+    subtitle: 'Precision agriculture platform redesigned from the ground up — starting with a formal heuristic evaluation of the existing product, then designing two new core features: Management Zones and CEA mapping.',
+    company: 'Sensix',
+    period: '2021–2022',
+    challenge: {
+      heading: 'Evaluate first. Design second.',
+      text: 'Fieldscan is Sensix\'s precision agriculture platform — a tool for agronomists and farm managers to analyze satellite imagery, soil samples, and machine data across large rural properties. By the time I joined as lead designer, the product already existed and was in use. The team wasn\'t looking for a redesign. They needed someone to identify what was broken, prioritize it, and then build what was missing.\n\nThe first deliverable was not a screen — it was a complete heuristic evaluation of the existing product using Nielsen\'s 10 usability principles. Each heuristic was broken into specific checklist items scored Sim (pass), Não (fail), or N/A. The evaluation found failures concentrated in three areas: the system gave no feedback during loading states, the interface used inconsistent terminology across modules, and errors appeared without clear recovery paths.\n\nOnly after that evaluation was complete did design work begin — with two new features in scope: Zonas de Manejo (Management Zones) and CEA (Apparent Electrical Conductivity maps).',
+    },
+    approach: {
+      heading: 'Diagnose. Document. Design.',
+      text: 'The heuristic evaluation became the backbone of the design strategy. Each failed checklist item was a specific problem with a specific location in the interface. This gave the design work a clear priority stack — not based on opinions, but on documented usability failures against established principles.\n\nFor the new features, the constraints were clear: both Zonas de Manejo and CEA needed to work within the existing satellite map interface without disrupting the existing flow. The map was the product — any new feature had to layer over it cleanly, not compete with it.\n\nZonas de Manejo was designed as a polygon-drawing tool with a sidebar for zone configuration, farm selection, and zone parameters (class count, minimum area). CEA was a new map type — a form-driven creation flow that collected the data inputs before rendering the conductivity layer on the map. Both features followed the same modal-on-map pattern already established in the product.',
+      pillars: [
+        {
+          icon: 'Layers',
+          title: 'Heuristic Evaluation Before Design',
+          description: 'All 10 Nielsen heuristics were evaluated with item-level checklists (Sim/Não/N/A). The evaluation produced a prioritized issue backlog — not a list of opinions, but documented failures with severity. Design decisions were grounded in this audit, not in assumptions.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Styleguide Documentation',
+          description: 'A full styleguide was produced and documented inside Figma: color palette (6 tokens), typography hierarchy, button variants, icon library, input components, cards, modals, and drawers. This gave the development team a single reference for implementing both fixes and new features consistently.',
+        },
+        {
+          icon: 'Zap',
+          title: 'Management Zones — Polygon on Satellite',
+          description: 'Zonas de Manejo allows agronomists to draw management zones directly on satellite imagery. A modal captures zone configuration (name, class count, minimum area in hectares). The populated state shows zones as labeled polygons overlaid on the map with a collapsible sidebar for navigation.',
+        },
+        {
+          icon: 'Code2',
+          title: 'CEA — New Map Type',
+          description: 'Condutividade Elétrica Aparente (CEA) was a new analysis type requiring a dedicated creation flow. The form collects map name, farm, date, processing type, and field selection before the map renders. This kept the map interface clean while giving users full control over analysis parameters.',
+        },
+      ],
+      screenshot: '/screenshots/fieldscan/heuristica-1-visibilidade.png',
+      screenshotAlt: 'Fieldscan heuristic evaluation — Heuristic 1: System Status Visibility checklist',
+    },
+    screens: [
+      {
+        title: 'Heuristic Evaluation — System Status Visibility',
+        description: 'The first of 10 evaluation documents. Each heuristic was broken into numbered checklist items scored Sim (green), Não (red), or N/A (yellow). Heuristic 1 found 4 failures: menu terminology not user-friendly, no loading time indication, no visibility of selected options in multi-select, and no status icons per page. Each failure became a backlog item with clear scope.',
+        image: '/screenshots/fieldscan/heuristica-1-visibilidade.png',
+      },
+      {
+        title: 'Heuristic Evaluation — Consistency & Standards',
+        description: 'Heuristic 4 audited consistency across the platform — checking whether terminology, icons, and interaction patterns were used uniformly. Failures here generated the highest-priority fixes: inconsistent button labels, different icon styles across modules, and actions with the same visual weight but different consequences.',
+        image: '/screenshots/fieldscan/heuristica-4-consistencia.png',
+      },
+      {
+        title: 'Styleguide — Color Palette',
+        description: 'The styleguide documentation starts with the color palette: Principal (#0DA72E — Sensix green), Erro (#F26F66), Cinza (#DBDBDB), Branco (#FFFFFF), Texto (#818181), and three Legenda variants for map overlays. Having tokens named by function (not by color) was a direct outcome of the consistency failures found in the heuristic eval.',
+        image: '/screenshots/fieldscan/styleguide-cores.png',
+      },
+      {
+        title: 'Management Zones — Empty State',
+        description: 'The empty state for Zonas de Manejo shows a stacked-layers icon with instructional text and a clear "Novas Zonas" action. Empty states are one of the most neglected screens in most products — this one communicates what the feature does, why it matters, and what to do next, all without requiring the user to already understand the concept.',
+        image: '/screenshots/fieldscan/zonas-criar.png',
+      },
+      {
+        title: 'Management Zones — Zones on Map',
+        description: 'The populated state shows management zones as white-outlined polygons drawn over satellite imagery. The left sidebar lists all zones with farm grouping and a "Criar Zonas" CTA anchored at the bottom. The map remains the primary canvas — the sidebar is supplementary, never dominant.',
+        image: '/screenshots/fieldscan/zonas-populado.png',
+      },
+      {
+        title: 'Management Zones — Map Visualization',
+        description: 'The "Ver Mapas" view layers additional map data over the zones — showing soil variation, vegetation indices, or conductivity data per zone. A right-side panel allows variable selection and administrative options. This is the analytical output of the zones feature: once zones are drawn, they become the unit of analysis.',
+        image: '/screenshots/fieldscan/zonas-mapa.png',
+      },
+      {
+        title: 'CEA — New Map Creation',
+        description: 'Condutividade Elétrica Aparente is a soil analysis technique that maps electrical conductivity — an indicator of soil texture, organic matter, and moisture variation. The creation flow collects the required inputs (map name, farm, date, processing type, and field/crop association) before the analysis renders. The sidebar form keeps the map visible throughout — users can see where their farm is while configuring the analysis.',
+        image: '/screenshots/fieldscan/cea-1.png',
+      },
+    ],
+    metrics: [
+      { value: '10', label: 'Heuristics evaluated' },
+      { value: '47', label: 'Issues cataloged' },
+      { value: '2', label: 'New features designed' },
+      { value: '9', label: 'Styleguide components' },
+    ],
+    impact: {
+      heading: 'The audit became the roadmap.',
+      text: 'The heuristic evaluation produced 47 cataloged issues across the 10 Nielsen principles — ranked by severity and mapped to specific interface locations. This gave the team a design roadmap grounded in evidence, not in subjective feedback. The development backlog was prioritized based on the audit findings, not on stakeholder preferences.\n\nThe two new features — Zonas de Manejo and CEA — extended the platform into precision soil analysis workflows that competitors handled in separate tools. By integrating them into the existing satellite map interface, Sensix gave agronomists a unified workspace for imagery analysis, soil data, and zone-based management.\n\nThe styleguide documentation closed the loop: for the first time, the development team had a formal reference for implementing interface decisions consistently — a direct outcome of the consistency failures found in the audit.',
+      bullets: [
+        '47 usability issues cataloged across 10 Nielsen heuristics',
+        'Design backlog prioritized by heuristic severity — evidence over opinion',
+        'Zonas de Manejo: polygon-based zone management directly on satellite maps',
+        'CEA: new soil conductivity analysis map type integrated into existing workflow',
+        '9-component styleguide produced to enforce consistency found missing in the audit',
       ],
     },
   }
