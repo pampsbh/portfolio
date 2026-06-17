@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const clients = [
   { name: 'XP Investimentos', logo: '/logos/xp-investimentos.png', url: 'https://www.xpi.com.br' },
   { name: 'Nubank', logo: '/logos/nubank.png', url: 'https://nubank.com.br' },
-  { name: 'VLI', logo: '/logos/vli.png', url: null },
+  { name: 'VLI', logo: '/logos/vli.png', url: 'https://www.vli-logistica.com.br' },
   { name: 'Adiq', logo: '/logos/adiq.png', url: 'https://www.adiq.com.br' },
   { name: 'Bosch', logo: '/logos/bosch.png', url: 'https://www.bosch.com.br' },
   { name: 'Unimed S.J. do Rio Preto', logo: '/logos/unimed.png', url: 'https://www.unimedsjrp.com.br' },
