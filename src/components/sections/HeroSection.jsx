@@ -21,7 +21,30 @@ const HeroSection = ({ openLink, linkedinUrl }) => {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto w-full">
+      <div className="relative max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-start">
+
+        {/* Photo — desktop right column */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="hidden lg:flex lg:col-start-2 lg:row-start-1 lg:row-span-4 items-start pt-2"
+        >
+          <div className="relative">
+            <div className="w-56 h-56 xl:w-64 xl:h-64 rounded-2xl overflow-hidden border border-white/10">
+              <img
+                src="/photos/igor-headshot.jpg"
+                alt="Igor Vilar"
+                className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
+            <div className="absolute -bottom-3 -right-3 bg-accent text-surface text-[10px] font-mono uppercase tracking-widest px-3 py-1.5 rounded-full">
+              Available
+            </div>
+          </div>
+        </motion.div>
+
+        <div>
         <motion.div
           {...fadeUp}
           transition={{ duration: 0.6, delay: 0.05 }}
@@ -106,6 +129,7 @@ const HeroSection = ({ openLink, linkedinUrl }) => {
             </div>
           ))}
         </motion.div>
+        </div>
       </div>
 
       <motion.div
