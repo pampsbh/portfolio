@@ -36,7 +36,7 @@ const ClientsSection = () => {
               key={client.name}
               src={client.logo}
               alt={client.name}
-              className="h-14 w-auto max-w-[140px] object-contain opacity-35 grayscale hover:opacity-70 hover:grayscale-0 transition-all duration-300 brightness-200"
+              className="h-10 w-auto max-w-[160px] object-contain opacity-50 hover:opacity-90 transition-all duration-300 brightness-200 [mix-blend-mode:screen]"
             />
           ))}
         </motion.div>
