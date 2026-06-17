@@ -62,16 +62,9 @@ const AboutSection = ({ highlights }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="lg:col-span-5 grid grid-cols-2 gap-3"
+            className="lg:col-span-5 flex items-start justify-center"
           >
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
-              <img
-                src="/photos/igor-headshot.jpg"
-                alt="Igor Vilar"
-                className="w-full h-full object-cover aspect-[4/5] grayscale group-hover:grayscale-0 transition-all duration-700"
-              />
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-white/10 mt-10 group">
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 group w-full max-w-sm">
               <img
                 src="/photos/igor-presenting.jpg"
                 alt="Igor Vilar presenting at an event"
