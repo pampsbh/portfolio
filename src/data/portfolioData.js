@@ -22,6 +22,12 @@ export const projects = [
     image: "/screenshots/noz/admin.png"
   },
   {
+    slug: "us-platform",
+    title: "US Platform — PJUS",
+    description: "First 100% digital precatório purchase platform in Brazil. R$5M+ revenue in 8 months.",
+    image: "/screenshots/us/area-logada.png"
+  },
+  {
     slug: null,
     title: "Unimed",
     description: "Virtual card, exam results, accredited network, information about the plan and allows you to request authorizations and issue invoices, among other features.",
@@ -351,6 +357,90 @@ export const cases = [
         '3x increase in content volume compared to V2',
         'Gamification loop drove organic content creation without mandating participation',
         'Admin dashboard became a key sales asset for new client acquisition',
+      ],
+    },
+  },
+  {
+    slug: 'us-platform',
+    category: 'Product Design',
+    title: 'US Platform',
+    subtitle: 'The first 100% digital platform for buying precatórios in Brazil — designed with no benchmark, no back-office, and a single flow that closed R$5M+ in 8 months.',
+    company: 'PJUS Investimentos',
+    period: '2022–2023',
+    challenge: {
+      heading: 'No benchmark. No manual fallback. No precedent.',
+      text: 'Precatórios are judicial debt obligations — government-owed debts that take years to pay out. PJUS buys them from the original creditors at a discount, giving those people immediate liquidity. It is a legitimate but deeply opaque financial asset. Most Brazilians have never heard of it. Nobody had ever built a fully digital acquisition flow for it.\n\nThe central UX challenge was not just explaining a complex product to a non-financial audience. It was compressing the entire cedente (seller) validation process into a single digital flow — without any back-office intervention. Traditional precatório operations rely on manual verification steps, human review, and physical documentation. The brief was to eliminate all of that and make it work entirely online.\n\nThat meant redesigning not just the interface, but the operational pipeline behind it. Every screen had to replace a back-office step.',
+    },
+    approach: {
+      heading: 'One flow. Zero back-office.',
+      text: 'With no benchmark to reference, the design process started from the ground up — mapping every validation requirement the legal and compliance teams needed, then finding the least friction way to collect each one digitally. The result was a single linear flow: CPF lookup → offer presentation → registration → document validation → acceptance.\n\nThe tradeoff was deliberate. Eliminating back-office steps reduced the cost of each operation, which meant PJUS could offer a lower deságio (discount) to clients — a better deal than competitors who relied on manual processes. The company accepted higher operational risk in exchange for speed and scale.\n\nThe partnership with XP Asset Management added credibility to a product category most users had never encountered. The co-branded header appeared on every authenticated screen, anchoring trust.',
+      pillars: [
+        {
+          icon: 'Layers',
+          title: 'CPF-First Entry Point',
+          description: 'The flow starts with a single CPF input — not a landing page registration. The system validates the precatório automatically before asking for any personal information. Users who have nothing to sell never reach the form. This reduced abandonment and focused acquisition on qualified leads.',
+        },
+        {
+          icon: 'Zap',
+          title: 'Offer Before Commitment',
+          description: 'The monetary offer is shown before registration — before the user creates an account or provides documents. Showing R$48K or R$76K on screen before asking for anything creates intent. It answers the only question the user has ("how much will I get?") at exactly the right moment.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Digital Cedente Validation',
+          description: 'The registration flow captures CPF, full legal name, contact, and terms acceptance in a single session. Each field maps to a compliance requirement that previously required manual back-office review. The form is the back-office.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Agents Dashboard',
+          description: 'A separate dark-mode dashboard gave internal agents real-time visibility into the pipeline — total opportunities, accepted offers, and paid amounts by modality (Federal, Parceiro, Estadual). This visibility enabled PJUS to manage risk across a high-volume digital operation.',
+        },
+      ],
+      screenshot: '/screenshots/us/homepage.png',
+      screenshotAlt: 'US Platform homepage — PJUS precatório acquisition platform',
+    },
+    screens: [
+      {
+        title: 'Homepage',
+        description: 'The landing page leads with the value proposition in plain language: "We anticipate precatórios and labor processes." The co-branded presence of XP Asset Management was a deliberate trust signal for users entering an unfamiliar financial transaction. A persistent "Precisa de ajuda?" CTA kept human support accessible throughout.',
+        image: '/screenshots/us/homepage.png',
+      },
+      {
+        title: 'Registration — Mobile',
+        description: 'The form collects only what compliance requires: CPF (pre-filled from the lookup), legal name, email, phone, and password. Two explicit consent checkboxes for terms and privacy policy are required before proceeding. The "Mais informações" accordion lets hesitant users get context without leaving the screen.',
+        image: '/screenshots/us/cadastro.png',
+      },
+      {
+        title: 'Login — Desktop',
+        description: 'A minimal authenticated entry point. CPF replaces email as the identifier — consistent with how Brazilians identify themselves in financial contexts. The "Não sou cliente da PJUS" link routes new users back to the offer flow without dead ends.',
+        image: '/screenshots/us/login-desktop.png',
+      },
+      {
+        title: 'Logged Area — Offers',
+        description: 'The logged area presents the user\'s precatório offers in a horizontal card layout with the monetary value prominent. "Temos outras propostas para você" surfaces additional offers the user may not have known about. The personalized CTA ("Você está autorizado para nosso atendimento personalizado") moves qualified users toward direct agent contact.',
+        image: '/screenshots/us/area-logada.png',
+      },
+      {
+        title: 'Operations Dashboard',
+        description: 'The internal dashboard was built for PJUS agents monitoring the pipeline in real time. Three KPIs dominate: R$97M in total opportunities, R$1B in accepted offers, R$397K paid. Below, a breakdown by modality (Federal, Parceiro, Estadual) gives operations managers the granularity to manage risk across a high-volume digital pipeline.',
+        image: '/screenshots/us/dashboard.png',
+      },
+    ],
+    metrics: [
+      { value: 'R$5M+', label: 'Revenue in 8 months' },
+      { value: '1st', label: 'Fully digital in Brazil' },
+      { value: '8mo', label: 'From zero to market' },
+      { value: '0', label: 'Back-office steps' },
+    ],
+    impact: {
+      heading: 'R$5M in 8 months. Then a pivot.',
+      text: 'The platform launched and the pipeline performed beyond projections. By eliminating back-office steps and making the process fully digital, PJUS was able to offer a lower deságio than competitors — a better deal for clients that drove acquisition. The product generated R$5M+ in revenue in under 8 months.\n\nThe same efficiency that drove performance also introduced risk. The company eventually pivoted the product — a strategic decision driven by risk management, not product failure. The digital pipeline, however, outlasted the pivot: the learnings from building zero back-office validation directly influenced how PJUS structured its subsequent operations.\n\nDesigning for a product category with no precedent required inventing both the interface and the process behind it. That is the kind of design work that moves metrics.',
+      bullets: [
+        'R$5M+ revenue generated in under 8 months',
+        'First 100% digital precatório acquisition flow in Brazil',
+        'Zero back-office steps — full cedente validation in a single digital session',
+        'Lower deságio enabled by operational efficiency — better deal for clients',
+        'Operations dashboard gave real-time pipeline visibility across R$1B+ in accepted offers',
       ],
     },
   }
