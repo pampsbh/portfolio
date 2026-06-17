@@ -35,7 +35,7 @@ const CasePage = () => {
     );
   }
 
-  const { category, title, subtitle, company, period, challenge, approach, tokens, icons, components, metrics, impact } = caseData;
+  const { category, title, subtitle, company, period, challenge, approach, tokens, icons, components, screens, metrics, impact } = caseData;
 
   return (
     <>
@@ -120,7 +120,36 @@ const CasePage = () => {
             )}
           </motion.section>
 
-          {/* 03 — Design Tokens */}
+          {/* 03 — Screens (optional, mobile/app cases) */}
+          {screens && screens.length > 0 && (
+            <motion.section {...fadeUp} className="py-16 border-b border-white/5">
+              <SectionLabel index={3} label="Screens" />
+              <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">Key screens & design decisions</h2>
+              <p className="text-ink-secondary text-base mb-12 max-w-2xl">Each screen was designed around a specific user task. Here is the reasoning behind the main flows.</p>
+
+              <div className="flex flex-col gap-16">
+                {screens.map((screen, i) => (
+                  <div key={screen.title} className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
+                    <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden border border-white/10 bg-elevated">
+                      <img
+                        src={screen.image}
+                        alt={screen.title}
+                        className="w-full object-cover"
+                        onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                      />
+                    </div>
+                    <div className="w-full lg:w-1/2">
+                      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent mb-3">{String(i + 1).padStart(2, '0')}</p>
+                      <h3 className="text-xl font-semibold text-ink-primary mb-4 tracking-tight">{screen.title}</h3>
+                      <p className="text-ink-secondary leading-relaxed text-base">{screen.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.section>
+          )}
+
+          {/* 04 — Design Tokens */}
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <SectionLabel index={3} label="Design Tokens" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{tokens.heading}</h2>

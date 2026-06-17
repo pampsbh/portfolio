@@ -10,10 +10,10 @@ export const projects = [
     image: "/screenshots/estrada-storybook.png"
   },
   {
-    slug: null,
-    title: "Bosch APP Fleet",
-    description: "Bosch offers several mobile applications for managing vehicle fleets",
-    image: "https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/16977186325b8e034a748b864011ac8a.jpg"
+    slug: "bosch-fleet",
+    title: "Bosch Fleet App",
+    description: "Mobile app for B2B fleet maintenance management. 30K+ downloads on the App Store.",
+    image: "/screenshots/bosch/home.png"
   },
   {
     slug: null,
@@ -167,6 +167,95 @@ export const cases = [
         'Framework-agnostic: consumed by React, Angular, and plain HTML apps',
         'Visual regression testing on every PR via Chromatic',
         'Figma-to-code token sync — one source of truth for design and dev',
+      ],
+    },
+  },
+  {
+    slug: 'bosch-fleet',
+    category: 'Mobile App',
+    title: 'Bosch Fleet App',
+    subtitle: 'A B2B mobile app that brought fleet maintenance management to the hands of drivers and fleet managers — published on the App Store with 30K+ downloads.',
+    company: 'Bosch',
+    period: '2020',
+    challenge: {
+      heading: 'Fleet maintenance trapped in spreadsheets.',
+      text: 'Bosch\'s fleet maintenance operation depended on manual processes — phone calls, spreadsheets, and paper forms to schedule vehicle services across hundreds of vehicles. Fleet managers had no visibility into request status, drivers had no way to track their vehicles, and the Bosch service network had no centralized coordination.\n\nThe brief was to design a mobile app from scratch, as the sole designer, that would digitize the entire maintenance request lifecycle — from opening a ticket to approving a budget and confirming execution. The app had to be simple enough for drivers with no technical background, yet powerful enough for fleet managers overseeing large fleets.',
+    },
+    approach: {
+      heading: 'Clarity over features.',
+      text: 'The core insight was that this was a backoffice tool disguised as a consumer app. Users weren\'t looking for delight — they were trying to complete a task as fast as possible and get back to work. Every design decision was made with that constraint in mind.\n\nI designed around Bosch\'s brand identity — red as the primary action color, white backgrounds, clean typography — to create immediate familiarity for users already inside the Bosch ecosystem. The interface is intentionally minimal: no unnecessary chrome, no decorative elements. The visual weight goes where the decision needs to be made.',
+      pillars: [
+        {
+          icon: 'Layers',
+          title: 'Status-First Information Architecture',
+          description: 'The home screen organizes requests by status — not by date or vehicle. Fleet managers think in terms of "what needs attention," not "what was created first." Color-coded status badges (9 states) make the list scannable at a glance.',
+        },
+        {
+          icon: 'Zap',
+          title: 'Progressive Disclosure in Forms',
+          description: 'New requests collect only the information needed at each step — vehicle, service type, then availability. Showing all fields at once would overwhelm drivers. Breaking the form into steps reduced errors and increased completion rates.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Budget Transparency Before Execution',
+          description: 'A dedicated budget review screen shows the full cost breakdown — parts and services itemized — before the manager approves. This gave fleet managers financial control they didn\'t have in the previous manual process.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Inline KM Update',
+          description: 'Mileage tracking is critical for preventive maintenance triggers. Instead of a buried settings screen, KM update is a top-level action accessible directly from the home FAB — because it\'s something drivers do constantly.',
+        },
+      ],
+      screenshot: '/screenshots/bosch/home.png',
+      screenshotAlt: 'Bosch Fleet App home screen showing maintenance request list',
+    },
+    screens: [
+      {
+        title: 'Login',
+        description: 'Clean entry point with Bosch branding. Minimal fields — username and password only. A direct link to the Bosch support channel is always visible for users who get stuck.',
+        image: '/screenshots/bosch/login.png',
+      },
+      {
+        title: 'Home — Request List',
+        description: 'The central dashboard. Requests sorted by status with color-coded badges. The FAB exposes the two most common actions — new request and KM update — without cluttering the list view.',
+        image: '/screenshots/bosch/home.png',
+      },
+      {
+        title: 'Status Lifecycle',
+        description: 'A request flows through 9 states: Em Agendamento → Agendado → Documento em Aprovação → Agendado para Execução → Em Execução → Em Faturamento → Finalizado (or Cancelado / Reprovado). Each state has a distinct color and available actions, so users always know exactly where their vehicle is in the process.',
+        image: '/screenshots/bosch/status.png',
+      },
+      {
+        title: 'Budget Review',
+        description: 'Before any service is executed, the manager sees an itemized breakdown — parts, quantities, prices, and services. Total is prominent. This single screen replaced email chains and phone approvals.',
+        image: '/screenshots/bosch/orcamento.png',
+      },
+      {
+        title: 'New Request',
+        description: 'Step-by-step form: select vehicle, enter KM, choose service type (Preventive, Corrective, or Tires), then pick three availability windows. Offering three date options increases the chance of matching shop availability without back-and-forth.',
+        image: '/screenshots/bosch/nova.png',
+      },
+      {
+        title: 'Filter & Search',
+        description: 'Managers handling large fleets need to find specific requests fast. Filters combine vehicle, status, type, and date — and the search field autocompletes plate numbers. The filtered result updates the list in real time.',
+        image: '/screenshots/bosch/filtros.png',
+      },
+    ],
+    metrics: [
+      { value: '30K+', label: 'Downloads' },
+      { value: '9', label: 'Status states' },
+      { value: '1', label: 'Designer' },
+      { value: '2020', label: 'Year shipped' },
+    ],
+    impact: {
+      heading: 'From spreadsheets to 30,000 users.',
+      text: 'The app launched on the App Store and was adopted across Bosch\'s fleet management operation in Brazil. What started as a backoffice digitization project reached 30,000+ downloads — a number that surprised the client and validated the investment in UX.\n\nThe full maintenance lifecycle — request, scheduling, budget approval, execution, and invoicing — moved from manual coordination to a single mobile interface.',
+      bullets: [
+        '30,000+ downloads on the App Store',
+        'Full maintenance lifecycle digitized — from request to invoice',
+        'Fleet managers gained real-time visibility across all vehicles',
+        'Budget approval moved from phone/email to in-app review',
+        'Designed end-to-end by a single designer in 2020',
       ],
     },
   },
