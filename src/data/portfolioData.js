@@ -265,7 +265,6 @@ export const cases = [
       ],
     },
   },
-  ,
   {
     slug: 'noz',
     category: 'Product Design',
