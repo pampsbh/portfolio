@@ -36,7 +36,7 @@ const ClientsSection = () => {
               key={client.name}
               src={client.logo}
               alt={client.name}
-              className="h-7 w-auto opacity-30 grayscale hover:opacity-60 hover:grayscale-0 transition-all duration-300 brightness-200"
+              className="h-14 w-auto max-w-[140px] object-contain opacity-35 grayscale hover:opacity-70 hover:grayscale-0 transition-all duration-300 brightness-200"
             />
           ))}
         </motion.div>
