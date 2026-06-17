@@ -66,15 +66,15 @@ const AboutSection = ({ highlights }) => {
           >
             <div className="relative rounded-2xl overflow-hidden border border-white/10 group">
               <img
-                src="https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/c75dfad62ce79cae85589129b13a9aec.jpg"
-                alt="Igor Vilar presenting"
+                src="/photos/igor-headshot.jpg"
+                alt="Igor Vilar"
                 className="w-full h-full object-cover aspect-[4/5] grayscale group-hover:grayscale-0 transition-all duration-700"
               />
             </div>
             <div className="relative rounded-2xl overflow-hidden border border-white/10 mt-10 group">
               <img
-                src="https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/d61a3cb8e66aeb3ca47501f164216954.jpg"
-                alt="Igor Vilar speaking at an event"
+                src="/photos/igor-presenting.jpg"
+                alt="Igor Vilar presenting at an event"
                 className="w-full h-full object-cover aspect-[4/5] grayscale group-hover:grayscale-0 transition-all duration-700"
               />
             </div>
