@@ -58,10 +58,10 @@ export const projects = [
     image: "/screenshots/tm1/400-feature.png"
   },
   {
-    slug: null,
-    title: "Nubank Underserved",
-    description: "Research carried out for nubank in 2022 to learn about another targeted audience",
-    image: "https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/3e662e941ef13ad7f8c3f00c68c728c1.jpg"
+    slug: "nubank-underage",
+    title: "Nubank Underage Research",
+    description: "Qualitative UX research for Nubank in 2022. 12 teenagers, 2 cities, anthropological methods. Mapping how Gen Z relates to money, banks, and financial independence.",
+    image: "/screenshots/nubank/cover.png"
   }
 ];
 
@@ -831,6 +831,65 @@ export const cases = [
         'Participant presence signals (live names, countries) made remote events feel attended',
         'Mobile countdown created a pre-event sharing moment before the platform even launched',
         'Dark theme elevated streaming content — interface recedes, event takes center stage',
+      ],
+    },
+  },
+  {
+    slug: 'nubank-underage',
+    category: 'UX Research',
+    title: 'Nubank Underage',
+    subtitle: 'Qualitative research for Nubank mapping how Brazilian teenagers between 13 and 18 relate to money, banks, and financial independence — and what it means for product strategy.',
+    company: 'Nubank',
+    period: '2022',
+    challenge: {
+      heading: 'How does Nubank enter the life of someone who can\'t open an account yet?',
+      text: 'The research question was precise: how can Nubank initiate and strengthen relationships with underage audiences by offering services and products designed for them? Nubank had massive brand recognition among adults but no specific product for teenagers — and the competition (Inter Conta Kids, Next Joy, NG Cash) was already moving in.\n\nThe brief required understanding who these users are, what their financial needs look like, how they perceive money and banks, and whether Nubank\'s current portfolio could serve them at all. The research had to map tensions — not just preferences — in their relationship with financial products, digital payments, and earning their first income.\n\nThis was not a feature discovery exercise. It was a cultural immersion into how a generation builds its relationship with money.',
+    },
+    approach: {
+      heading: 'Anthropological methods. Not surveys.',
+      text: 'The research used qualitative anthropological methodology — a deliberate choice over quantitative surveys. Understanding how teenagers relate to money requires context, contradiction, and narrative — not percentages.\n\nThe study included 12 adolescents between 13 and 18 years old from São Paulo and Bahia, conducted by anthropologists. Participants were selected across income levels, geographies, religions, and racial identities to reflect the real diversity of Brazilian youth. Alongside in-depth interviews, participants over 16 were given missions over two weeks — tasks designed to build an imagistic and symbolic repertoire beyond verbal discourse.\n\nThe missions captured what teenagers wouldn\'t think to say in an interview: how they photograph their first paycheck, what financial influencers they follow, how they photograph their own spending. Behavior, not opinion.',
+      pillars: [
+        {
+          icon: 'Layers',
+          title: 'The Biographical Framework',
+          description: 'The core analytical lens: success for Gen Z is writing a biography that defies the circumstances. In a world with climate crisis, economic instability, pandemic, and political polarization, the question isn\'t "how do I change the world?" — it\'s "how do I make my own story work despite it?"',
+        },
+        {
+          icon: 'Zap',
+          title: 'The Financial Independence Model',
+          description: 'A four-stage journey from 13 to 18: Autoconhecimento (discovering talents) → Planejamento (managing with parents\' money) → Autonomia (first own income) → Teste (low-risk financial experimentation). Each stage has distinct needs and product implications.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Missions as Method',
+          description: 'Participants over 16 completed 2-week photo and video missions — documenting their financial behaviors, desires, and frustrations in their own language. This captured authentic behavior: a teenager filming herself tracking expenses on a spreadsheet she built from a finance influencer\'s tip.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Competitive Landscape Mapping',
+          description: 'The research mapped four direct competitors: Inter Conta Kids (parent-focused investment tool), Next Joy (Disney-themed dual app for parent + child), BB Conta Jovem (traditional bank for 12-21), NG Cash (youth language, not youth-specific). None had solved the independence vs. parental oversight tension.',
+        },
+      ],
+      screenshot: '/screenshots/nubank/cover.svg',
+      screenshotAlt: 'Nubank Underage Research 2022',
+    },
+    screens: [],
+    metrics: [
+      { value: '12', label: 'Participants' },
+      { value: '13–18', label: 'Age range' },
+      { value: '2', label: 'Cities (SP + BA)' },
+      { value: '114', label: 'Research pages' },
+    ],
+    impact: {
+      heading: 'Four insights that shaped the product brief.',
+      text: 'The research produced four strategic findings that directly translated into product recommendations for Nubank.\n\n**1. The account must be theirs, not their parents\'.** Even when parents control the money, teenagers need the account to be in their name, with their card, in their app. The card with their name is a rite of passage — a physical symbol of the beginning of financial independence. Inter Conta Kids got this wrong by making the product feel like a parental investment tool.\n\n**2. Feature unlocking as a gamification model.** The independence journey is nonlinear but directional — teenagers move from "dinheiro do meu pai" to "meu dinheiro" over time. A product that unlocks features (Pix → debit card → app → credit with authorization) as the user demonstrates financial maturity mirrors exactly how they think about growing up.\n\n**3. Spending visualization is the gateway to financial education.** Teenagers don\'t want lectures. They want to see where their money went. A visual, clear expense history was the single most-cited functional need. 70% of parents give their children money regularly — and teenagers consistently said they\'d spend it more carefully if they could see it.\n\n**4. Nubank had awareness, but no product.** Every teenager had heard of Nubank. None had a product for them. The brand was modern and trustworthy — which is the hardest thing to build. The product gap was the opportunity.',
+      bullets: [
+        '12 adolescents, 2 cities, anthropological methods — behavior over opinion',
+        'The biographical framework: Gen Z success = writing your own story despite adverse circumstances',
+        'Four-stage financial independence model (13→15→18) with distinct product needs per stage',
+        'Spending visualization identified as the highest-priority functional feature',
+        'Competitive audit of 4 players: none solved independence vs. parental oversight',
+        'Nubank had brand trust with zero underage product — the gap was the opportunity',
       ],
     },
   }
