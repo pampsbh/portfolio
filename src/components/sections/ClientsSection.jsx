@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const clients = [
-  { name: 'XP Investimentos', logo: '/logos/xp-investimentos.png' },
-  { name: 'Nubank', logo: '/logos/nubank.png' },
-  { name: 'VLI', logo: '/logos/vli.png' },
-  { name: 'Adiq', logo: '/logos/adiq.png' },
-  { name: 'Bosch', logo: '/logos/bosch.png' },
-  { name: 'Unimed S.J. do Rio Preto', logo: '/logos/unimed.png' },
+  { name: 'XP Investimentos', logo: '/logos/xp-investimentos.png', url: 'https://www.xpi.com.br' },
+  { name: 'Nubank', logo: '/logos/nubank.png', url: 'https://nubank.com.br' },
+  { name: 'VLI', logo: '/logos/vli.png', url: null },
+  { name: 'Adiq', logo: '/logos/adiq.png', url: 'https://www.adiq.com.br' },
+  { name: 'Bosch', logo: '/logos/bosch.png', url: 'https://www.bosch.com.br' },
+  { name: 'Unimed S.J. do Rio Preto', logo: '/logos/unimed.png', url: 'https://www.unimedsjrp.com.br' },
 ];
 
 const ClientsSection = () => {
@@ -31,14 +31,28 @@ const ClientsSection = () => {
           viewport={{ once: true }}
           className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8"
         >
-          {clients.map((client) => (
-            <img
-              key={client.name}
-              src={client.logo}
-              alt={client.name}
-              className="h-10 w-auto max-w-[160px] object-contain opacity-50 hover:opacity-90 transition-all duration-300 brightness-200 [mix-blend-mode:screen]"
-            />
-          ))}
+          {clients.map((client) => {
+            const img = (
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="h-10 w-auto max-w-[160px] object-contain opacity-50 hover:opacity-90 transition-all duration-300 brightness-200 [mix-blend-mode:screen]"
+              />
+            );
+            return client.url ? (
+              <a
+                key={client.name}
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={client.name}
+              >
+                {img}
+              </a>
+            ) : (
+              <span key={client.name}>{img}</span>
+            );
+          })}
         </motion.div>
       </div>
     </section>
