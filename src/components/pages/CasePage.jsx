@@ -149,8 +149,8 @@ const CasePage = () => {
             </motion.section>
           )}
 
-          {/* 04 — Design Tokens */}
-          <motion.section {...fadeUp} className="py-16 border-b border-white/5">
+          {/* 04 — Design Tokens (optional) */}
+          {tokens && <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <SectionLabel index={3} label="Design Tokens" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{tokens.heading}</h2>
             <p className="text-ink-secondary text-base mb-12 max-w-2xl">{tokens.intro}</p>
@@ -202,9 +202,10 @@ const CasePage = () => {
                 </div>
               ))}
             </div>
-          </motion.section>
+          </motion.section>}
 
-          {/* 04 — Iconography */}
+          {/* 04 — Iconography (optional) */}
+          {icons && <div>
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <SectionLabel index={4} label="Iconography" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{icons.heading}</h2>
@@ -230,8 +231,10 @@ const CasePage = () => {
               </div>
             </div>
           </motion.section>
+          </div>}
 
-          {/* 05 — Components */}
+          {/* 05 — Components (optional) */}
+          {components && <div>
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
             <SectionLabel index={5} label="Components" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{components.heading}</h2>
@@ -281,6 +284,7 @@ const CasePage = () => {
               </div>
             </div>
           </motion.section>
+          </div>}
 
           {/* 06 — Metrics */}
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
