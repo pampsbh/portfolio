@@ -34,6 +34,12 @@ export const projects = [
     image: "https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/6004933b8e0eafd47fd62667cb023152.jpg"
   },
   {
+    slug: "alaska",
+    title: "Alaska Asset Management App",
+    description: "Financial education MVP for Alaska Asset Management. Full course system with gamification — published on the App Store in 2020.",
+    image: "/screenshots/alaska/home.png"
+  },
+  {
     slug: null,
     title: "Nubank Underserved",
     description: "Research carried out for nubank in 2022 to learn about another targeted audience",
@@ -441,6 +447,85 @@ export const cases = [
         'Zero back-office steps — full cedente validation in a single digital session',
         'Lower deságio enabled by operational efficiency — better deal for clients',
         'Operations dashboard gave real-time pipeline visibility across R$1B+ in accepted offers',
+      ],
+    },
+  },
+  {
+    slug: 'alaska',
+    category: 'Mobile App',
+    title: 'Alaska Asset Management App',
+    subtitle: 'A financial education MVP designed to convert learners into investors — with a complete course system, gamification, and admin dashboard. Published in 2020.',
+    company: 'Alaska Asset Management',
+    period: '2020',
+    challenge: {
+      heading: 'Turn education into acquisition.',
+      text: 'Alaska Asset Management is one of Brazil\'s most recognized investment funds. In 2020, they wanted to test a new acquisition hypothesis: if potential investors could learn about the fund\'s strategy and philosophy directly from their team, they would be more likely to allocate capital.\n\nThe brief was to design an MVP mobile app — a structured course platform branded to Alaska, with video lessons taught by the fund\'s own team. The target user was someone already curious about investing but not yet a client. The goal was to move them from curious to committed through education.\n\nThe UX challenge was making financial education feel engaging and worth completing — not another abandoned course app.',
+    },
+    approach: {
+      heading: 'Progress, not content.',
+      text: 'Financial education apps fail when they feel like homework. The design focused on a single insight: users need to feel like they are advancing toward something, not just consuming content. Every screen was built around momentum.\n\nThe course structure uses locked/unlocked modules — each completed lesson visually unlocks the next, creating a clear path forward. The Alaska Coins gamification layer adds a concrete reward at the end: complete 100% of the course and all tests, and you unlock exclusive content unavailable to the general public. The reward is knowledge, not a badge.\n\nThe video player screen is stripped of everything except the lesson — no distractions, skip controls, and a "Próximos conteúdos" section that previews what comes next, reducing the friction of returning for the next session.',
+      pillars: [
+        {
+          icon: 'Layers',
+          title: 'Progressive Module Unlock',
+          description: 'Modules unlock sequentially as the user completes lessons. The visual lock/unlock state makes progress tangible and creates forward momentum. Users always know exactly where they are and what comes next.',
+        },
+        {
+          icon: 'Zap',
+          title: 'Alaska Coins — Earned, Not Given',
+          description: 'Coins are only awarded for genuine completion: 100% course progress plus 100% on all tests. There is no shortcut. This design choice makes the reward meaningful and ensures users who earn it have actually absorbed the content.',
+        },
+        {
+          icon: 'Code2',
+          title: 'Focused Video Experience',
+          description: 'The lesson screen removes all navigation chrome. The video is fullscreen with skip controls. Below it, the current lesson title and a "Próximos conteúdos" list creates context without interrupting focus. The "Avançar" CTA appears only when content is completed.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Admin Content Management',
+          description: 'A companion dashboard let the Alaska team manage modules, create units, set up assessments, and track user progress — giving the fund full editorial control over the learning experience without technical dependency.',
+        },
+      ],
+      screenshot: '/screenshots/alaska/curso.png',
+      screenshotAlt: 'Alaska app course screen showing module progression with lock/unlock states',
+    },
+    screens: [
+      {
+        title: 'Home — Course Dashboard',
+        description: 'The home screen picks up exactly where the user left off — showing the current lesson with a "Continuar" CTA. Below it, an audio module previews the next content, and the full module map gives a birds-eye view of overall progress. No friction, no decisions — just continue.',
+        image: '/screenshots/alaska/home.png',
+      },
+      {
+        title: 'Course — Module Map',
+        description: 'The course screen presents modules as a visual grid with distinct lock states. Completed modules show a checkmark, the current module is highlighted in teal, and locked modules are grayed out. The "Alaska Secret" module sits at the top — exclusive content unlocked only by completing everything, creating a visible aspirational target from day one.',
+        image: '/screenshots/alaska/curso.png',
+      },
+      {
+        title: 'Lesson — Video Player',
+        description: 'The video lesson screen is deliberately minimal. The player takes most of the screen with skip controls. Below: the lesson title, a collapsed description with "ver mais", and a list of upcoming content topics. This structure lets users scan what they are about to learn before committing to the video — reducing abandonment.',
+        image: '/screenshots/alaska/aula.png',
+      },
+      {
+        title: 'Alaska Coins — Gamification',
+        description: 'The Alaska Coins screen explains the reward clearly: complete 100% of the course and score 100% on every test to unlock exclusive content reserved for a select group of users. The illustration reinforces abundance and reward. The Alaska logo grounds it in brand credibility.',
+        image: '/screenshots/alaska/points.png',
+      },
+    ],
+    metrics: [
+      { value: 'MVP', label: 'Scope' },
+      { value: '2020', label: 'Year shipped' },
+      { value: '<100', label: 'Downloads' },
+      { value: '100%', label: 'Flow designed' },
+    ],
+    impact: {
+      heading: 'The product worked. The distribution did not.',
+      text: 'The Alaska app was published on the App Store in 2020 with a complete course flow, gamification system, and admin dashboard. The design hypothesis — that structured financial education could drive fund acquisition — was never properly tested.\n\nThe app reached fewer than 100 downloads. Not because the product was broken, but because the marketing campaign behind it was minimal. Without distribution, even well-designed products stall. This is one of the clearest lessons from this project: UX is only half the equation. Acquisition is the other half, and no amount of good design compensates for the absence of a go-to-market strategy.\n\nThe design work, however, was complete and production-ready — from onboarding to gamification to admin tooling. The project is included here because not every case study should end with a success metric. Some of the most useful lessons come from products that shipped and did not scale.',
+      bullets: [
+        'Complete MVP delivered — course system, video player, gamification, admin dashboard',
+        'Published on the App Store in 2020',
+        'Under 100 downloads due to insufficient marketing investment',
+        'Design hypothesis (education → acquisition) was valid but never fully tested at scale',
+        'Key learning: distribution is a design problem too',
       ],
     },
   }
