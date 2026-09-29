@@ -18,17 +18,17 @@
 ```bash
 npx vite build
 cp -r public/screenshots dist/screenshots
-# Upload dist/ → raiz do FTP (não public_html/)
-# Host: ftp://31.170.166.157  Port: 21
-# User: u665104129.igorvilar.com.br
-# Dir:  / (raiz, não public_html!)
+# Upload dist/ → raiz do FTP (a conta FTP já começa em public_html/)
+# Host: ftp://89.116.115.253  Port: 21  (plano Unlimited, migrado em 2026-09-29)
+# User: conta FTP "deploy" do igorvilar.com.br (ver FTP_USERNAME)
+# Dir:  / (raiz da conta = domains/igorvilar.com.br/public_html)
 ```
 
 ### Automático (GitHub Actions)
 Push para `main` → build + FTP automático.
 
 Secrets necessários no GitHub (`github.com/pampsbh/portfolio → Settings → Secrets`):
-- `FTP_USERNAME` → `u665104129.igorvilar.com.br`
+- `FTP_USERNAME` → usuário da conta FTP "deploy" no plano Unlimited
 - `FTP_PASSWORD` → senha FTP da Hostinger
 
 ### Importante sobre cache
@@ -40,7 +40,7 @@ Secrets necessários no GitHub (`github.com/pampsbh/portfolio → Settings → S
 ## Produção
 - URL: https://igorvilar.com.br
 - GitHub: https://github.com/pampsbh/portfolio
-- FTP: 31.170.166.157 (raiz do FTP, não public_html)
+- FTP: 89.116.115.253 (raiz da conta FTP = public_html do site)
 
 ## Figma
 - Conta: igorvilaralmeida@gmail.com (Igor Costa)

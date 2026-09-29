@@ -31,9 +31,9 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: 31.170.166.157
+          server: 89.116.115.253
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          server-dir: ./
           dangerous-clean-slate: false
