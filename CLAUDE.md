@@ -47,8 +47,9 @@ Secrets necessários no GitHub (`github.com/pampsbh/portfolio → Settings → S
 - API token: variável de ambiente `FIGMA_TOKEN` (não commitar)
 
 ## Cases de portfólio
+- `/case/opera` → Opera, plataforma de operações (PJUS). É o case mais completo e usa as seções opcionais `glance`, `pipeline`, `initiatives` (filtráveis), `timeline`, `process`, `stack` e `learnings` do `CasePage`
 - `/case/design-system` → Estrada Design System (PJUS)
-- Próximos: US Platform, outros projetos PJUS
+- `/case/us-platform` → US Platform (PJUS)
 
 ## Design System (Estrada)
 - Repo local: `C:\Users\igor.costa\source\repos\Estrada`

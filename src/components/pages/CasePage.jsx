@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { ArrowLeft, ArrowUpRight, Layers, Code2, Zap, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Layers, Code2, Zap, ShieldCheck, LayoutDashboard, Sparkles, MessagesSquare, Palette, Plug, Smartphone, ChevronDown } from 'lucide-react';
 import { cases } from '@/data/portfolioData';
 
-const PILLAR_ICONS = { Layers, Code2, Zap, ShieldCheck };
+const PILLAR_ICONS = { Layers, Code2, Zap, ShieldCheck, LayoutDashboard, Sparkles, MessagesSquare, Palette, Plug, Smartphone };
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -20,9 +20,87 @@ const SectionLabel = ({ index, label }) => (
   </div>
 );
 
+const InitiativesGrid = ({ items }) => {
+  const areas = ['All', ...new Set(items.map((item) => item.area))];
+  const [area, setArea] = useState('All');
+  const [openTitle, setOpenTitle] = useState(null);
+  const visible = area === 'All' ? items : items.filter((item) => item.area === area);
+
+  return (
+    <>
+      <div className="flex flex-wrap gap-2 mb-8" role="tablist" aria-label="Filter initiatives by area">
+        {areas.map((a) => {
+          const count = a === 'All' ? items.length : items.filter((item) => item.area === a).length;
+          const active = a === area;
+          return (
+            <button
+              key={a}
+              role="tab"
+              aria-selected={active}
+              onClick={() => setArea(a)}
+              className={`font-mono text-[11px] uppercase tracking-[0.12em] px-3 py-1.5 rounded-full border transition-colors ${
+                active ? 'border-accent bg-accent/10 text-accent' : 'border-white/10 text-ink-secondary hover:border-white/30 hover:text-ink-primary'
+              }`}
+            >
+              {a} <span className="text-ink-muted">{count}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {visible.map((item) => {
+          const open = openTitle === item.title;
+          return (
+            <div key={item.title} className={`rounded-2xl border bg-elevated transition-colors ${open ? 'border-accent/40 sm:col-span-2' : 'border-white/10 hover:border-white/20'}`}>
+              <button
+                onClick={() => setOpenTitle(open ? null : item.title)}
+                aria-expanded={open}
+                className="w-full text-left p-5 flex items-start justify-between gap-4"
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-accent">{item.area}</span>
+                    <span className="font-mono text-[10px] text-ink-muted">{item.date}</span>
+                  </div>
+                  <h3 className="text-base font-medium text-ink-primary leading-snug">{item.title}</h3>
+                </div>
+                <ChevronDown className={`w-4 h-4 mt-1 flex-shrink-0 text-ink-muted transition-transform ${open ? 'rotate-180 text-accent' : ''}`} />
+              </button>
+              {open && item.image && (
+                <div className="px-5 pt-1 pb-5">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full rounded-xl border border-white/10"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+              )}
+              {open && (
+                <div className="px-5 pb-6 grid grid-cols-1 md:grid-cols-3 gap-5 border-t border-white/5 pt-5">
+                  {[['Problem', item.problem], ['What I did', item.action], ['Outcome', item.outcome]].map(([label, text]) => (
+                    <div key={label}>
+                      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted mb-2">{label}</p>
+                      <p className="text-sm text-ink-secondary leading-relaxed">{text}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
 const CasePage = () => {
   const { slug } = useParams();
   const caseData = cases.find((c) => c.slug === slug);
+  let sectionCount = 0;
+  const next = () => ++sectionCount;
 
   if (!caseData) {
     return (
@@ -35,7 +113,19 @@ const CasePage = () => {
     );
   }
 
-  const { category, title, subtitle, company, period, challenge, approach, tokens, icons, components, screens, metrics, impact } = caseData;
+  const { category, title, subtitle, company, period, glance, challenge, pipeline, approach, initiatives, timeline, process: workProcess, stack, tokens, icons, components, screens, metrics, impact, learnings } = caseData;
+
+  const jumpLinks = [
+    ['challenge', 'Challenge'],
+    pipeline && ['pipeline', 'Pipeline'],
+    ['approach', 'Approach'],
+    initiatives && ['initiatives', 'What I shipped'],
+    timeline && ['timeline', 'Timeline'],
+    workProcess && ['process', 'Process'],
+    stack && ['stack', 'Stack'],
+    ['impact', 'Impact'],
+  ].filter(Boolean);
+  const maxCommits = timeline ? Math.max(...timeline.months.map((m) => m.commits)) : 0;
 
   return (
     <>
@@ -66,6 +156,32 @@ const CasePage = () => {
             {subtitle}
           </p>
           <p className="font-mono text-sm text-ink-muted">{company} · {period}</p>
+
+          {glance && (
+            <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px mt-10 rounded-2xl overflow-hidden border border-white/10 bg-white/10">
+              {glance.map((g) => (
+                <div key={g.label} className="bg-elevated p-5">
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted mb-2">{g.label}</dt>
+                  <dd className="text-sm text-ink-primary leading-snug">{g.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
+
+          {initiatives && (
+            <nav aria-label="On this page" className="flex flex-wrap gap-2 mt-8">
+              {jumpLinks.map(([id, label]) => (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  onClick={(e) => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }}
+                  className="text-xs text-ink-secondary hover:text-accent border border-white/10 hover:border-accent/40 rounded-full px-3 py-1 transition-colors"
+                >
+                  {label}
+                </a>
+              ))}
+            </nav>
+          )}
         </motion.header>
 
         <div className="border-t border-white/5" />
@@ -73,17 +189,50 @@ const CasePage = () => {
         <main className="max-w-4xl mx-auto px-6">
 
           {/* 01 — Challenge */}
-          <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-            <SectionLabel index={1} label="The Challenge" />
+          <motion.section {...fadeUp} id="challenge" className="py-16 border-b border-white/5 scroll-mt-8">
+            <SectionLabel index={next()} label="The Challenge" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-6 tracking-tight">{challenge.heading}</h2>
             {challenge.text.split('\n\n').map((para, i) => (
               <p key={i} className="text-ink-secondary leading-relaxed text-base max-w-2xl mb-4 last:mb-0">{para}</p>
             ))}
           </motion.section>
 
+          {/* Pipeline (optional) */}
+          {pipeline && (
+            <motion.section {...fadeUp} id="pipeline" className="py-16 border-b border-white/5 scroll-mt-8">
+              <SectionLabel index={next()} label="The Pipeline" />
+              <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{pipeline.heading}</h2>
+              <p className="text-ink-secondary text-base mb-10 max-w-2xl">{pipeline.intro}</p>
+
+              <ol className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-10">
+                {pipeline.stages.map((stage, i) => {
+                  const last = i === pipeline.stages.length - 1;
+                  return (
+                    <li
+                      key={stage}
+                      className={`rounded-xl border p-4 flex flex-col gap-2 ${last ? 'border-accent/40 bg-accent/5' : 'border-white/10 bg-elevated'}`}
+                    >
+                      <span className={`font-mono text-[10px] tracking-[0.18em] ${last ? 'text-accent' : 'text-ink-muted'}`}>
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm text-ink-primary leading-snug">{stage}</span>
+                    </li>
+                  );
+                })}
+              </ol>
+
+              <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-ink-muted mb-4">Who moves it forward</h3>
+              <div className="flex flex-wrap gap-2">
+                {pipeline.roles.map((role) => (
+                  <span key={role} className="text-xs text-ink-secondary border border-white/10 rounded-full px-3 py-1">{role}</span>
+                ))}
+              </div>
+            </motion.section>
+          )}
+
           {/* 02 — Approach */}
-          <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-            <SectionLabel index={2} label="Approach" />
+          <motion.section {...fadeUp} id="approach" className="py-16 border-b border-white/5 scroll-mt-8">
+            <SectionLabel index={next()} label="Approach" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-6 tracking-tight">{approach.heading}</h2>
             {approach.text.split('\n\n').map((para, i) => (
               <p key={i} className="text-ink-secondary leading-relaxed text-base max-w-2xl mb-4 last:mb-0">{para}</p>
@@ -123,7 +272,7 @@ const CasePage = () => {
           {/* 03 — Screens (optional, mobile/app cases) */}
           {screens && screens.length > 0 && (
             <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-              <SectionLabel index={3} label="Screens" />
+              <SectionLabel index={next()} label="Screens" />
               <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">Key screens & design decisions</h2>
               <p className="text-ink-secondary text-base mb-12 max-w-2xl">Each screen was designed around a specific user task. Here is the reasoning behind the main flows.</p>
 
@@ -151,7 +300,7 @@ const CasePage = () => {
 
           {/* 04 — Design Tokens (optional) */}
           {tokens && <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-            <SectionLabel index={3} label="Design Tokens" />
+            <SectionLabel index={next()} label="Design Tokens" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{tokens.heading}</h2>
             <p className="text-ink-secondary text-base mb-12 max-w-2xl">{tokens.intro}</p>
 
@@ -207,7 +356,7 @@ const CasePage = () => {
           {/* 04 — Iconography (optional) */}
           {icons && <div>
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-            <SectionLabel index={4} label="Iconography" />
+            <SectionLabel index={next()} label="Iconography" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{icons.heading}</h2>
             <p className="text-ink-secondary text-base mb-12 max-w-2xl">{icons.intro}</p>
 
@@ -236,7 +385,7 @@ const CasePage = () => {
           {/* 05 — Components (optional) */}
           {components && <div>
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-            <SectionLabel index={5} label="Components" />
+            <SectionLabel index={next()} label="Components" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{components.heading}</h2>
             <p className="text-ink-secondary text-base mb-12 max-w-2xl">{components.intro}</p>
 
@@ -286,9 +435,83 @@ const CasePage = () => {
           </motion.section>
           </div>}
 
+          {/* Initiatives (optional) */}
+          {initiatives && (
+            <motion.section {...fadeUp} id="initiatives" className="py-16 border-b border-white/5 scroll-mt-8">
+              <SectionLabel index={next()} label="What I Shipped" />
+              <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{initiatives.heading}</h2>
+              <p className="text-ink-secondary text-base mb-10 max-w-2xl">{initiatives.intro}</p>
+              <InitiativesGrid items={initiatives.items} />
+            </motion.section>
+          )}
+
+          {/* Timeline (optional) */}
+          {timeline && (
+            <motion.section {...fadeUp} id="timeline" className="py-16 border-b border-white/5 scroll-mt-8">
+              <SectionLabel index={next()} label="Timeline" />
+              <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{timeline.heading}</h2>
+              <p className="text-ink-secondary text-base mb-10 max-w-2xl">{timeline.intro}</p>
+
+              <ol className="flex flex-col">
+                {timeline.months.map((m) => (
+                  <li key={m.month} className="grid grid-cols-[3rem_1fr] sm:grid-cols-[3rem_12rem_1fr] gap-x-4 gap-y-2 items-center py-4 border-b border-white/5 last:border-b-0">
+                    <span className="font-mono text-xs uppercase tracking-[0.18em] text-ink-primary">{m.month}</span>
+                    <div className="flex items-center gap-3">
+                      <div className="h-2 rounded-full bg-accent/70" style={{ width: `${(m.commits / maxCommits) * 100}%`, minWidth: 8, maxWidth: '8rem' }} />
+                      <span className="font-mono text-[11px] text-ink-muted whitespace-nowrap">{m.commits} commits</span>
+                    </div>
+                    <div className="col-start-2 sm:col-start-3 flex flex-wrap gap-1.5">
+                      {m.highlights.map((h) => (
+                        <span key={h} className="text-xs text-ink-secondary bg-white/5 rounded-md px-2 py-0.5">{h}</span>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </motion.section>
+          )}
+
+          {/* Process (optional) */}
+          {workProcess && (
+            <motion.section {...fadeUp} id="process" className="py-16 border-b border-white/5 scroll-mt-8">
+              <SectionLabel index={next()} label="Process" />
+              <h2 className="text-2xl font-semibold text-ink-primary mb-4 tracking-tight">{workProcess.heading}</h2>
+              <p className="text-ink-secondary text-base mb-10 max-w-2xl">{workProcess.intro}</p>
+              <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                {workProcess.steps.map((step, i) => (
+                  <li key={step.title} className="rounded-2xl border border-white/10 bg-elevated p-5 flex flex-col gap-3">
+                    <span className="font-mono text-[10px] tracking-[0.18em] text-accent">{String(i + 1).padStart(2, '0')}</span>
+                    <h3 className="text-sm font-medium text-ink-primary">{step.title}</h3>
+                    <p className="text-xs text-ink-secondary leading-relaxed">{step.description}</p>
+                  </li>
+                ))}
+              </ol>
+            </motion.section>
+          )}
+
+          {/* Stack (optional) */}
+          {stack && (
+            <motion.section {...fadeUp} id="stack" className="py-16 border-b border-white/5 scroll-mt-8">
+              <SectionLabel index={next()} label="Stack" />
+              <h2 className="text-2xl font-semibold text-ink-primary mb-10 tracking-tight">{stack.heading}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {stack.groups.map((group) => (
+                  <div key={group.title} className="rounded-2xl border border-white/10 bg-elevated p-5">
+                    <h3 className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted mb-4">{group.title}</h3>
+                    <div className="flex flex-wrap gap-1.5">
+                      {group.items.map((item) => (
+                        <span key={item} className="text-xs text-ink-primary border border-white/10 rounded-md px-2 py-1">{item}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.section>
+          )}
+
           {/* 06 — Metrics */}
           <motion.section {...fadeUp} className="py-16 border-b border-white/5">
-            <SectionLabel index={6} label="By the Numbers" />
+            <SectionLabel index={next()} label="By the Numbers" />
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
               {metrics.map((m) => (
                 <div key={m.label} className="rounded-2xl border border-white/10 bg-elevated p-6 flex flex-col gap-2">
@@ -300,8 +523,8 @@ const CasePage = () => {
           </motion.section>
 
           {/* 07 — Impact */}
-          <motion.section {...fadeUp} className="py-16">
-            <SectionLabel index={7} label="Impact" />
+          <motion.section {...fadeUp} id="impact" className="py-16 scroll-mt-8">
+            <SectionLabel index={next()} label="Impact" />
             <h2 className="text-2xl font-semibold text-ink-primary mb-6 tracking-tight">{impact.heading}</h2>
             {impact.text.split('\n\n').map((para, i) => (
               <p key={i} className="text-ink-secondary leading-relaxed text-base max-w-2xl mb-4 last:mb-0">{para}</p>
@@ -314,6 +537,20 @@ const CasePage = () => {
                 </li>
               ))}
             </ul>
+
+            {learnings && (
+              <div className="mt-14">
+                <h3 className="font-mono text-xs uppercase tracking-[0.18em] text-ink-muted mb-5">What I learned</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {learnings.map((l) => (
+                    <div key={l.title} className="rounded-2xl border border-white/10 bg-elevated p-5">
+                      <h4 className="text-sm font-medium text-ink-primary mb-2">{l.title}</h4>
+                      <p className="text-xs text-ink-secondary leading-relaxed">{l.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.section>
         </main>
 
