@@ -1,4 +1,4 @@
-import { User, Briefcase, Award, MessageCircle } from 'lucide-react';
+import { User, Award, Sparkles, Code2 } from 'lucide-react';
 
 export const navItems = ['About', 'Projects', 'Experience', 'Linkedin', 'Contact'];
 
@@ -10,10 +10,22 @@ export const projects = [
     image: "/screenshots/opera/board.jpg"
   },
   {
+    slug: "ai-due-diligence",
+    title: "AI Due Diligence — Opera",
+    description: "Bringing AI into legal analysis with a visible seam: document extraction, per-field origin badges and an editable AI case study that answers 60 legal questions. The model reads, the lawyer decides.",
+    image: "/screenshots/opera/case-study.jpg"
+  },
+  {
     slug: "design-system",
     title: "Estrada Design System",
-    description: "Token-first design system unifying all PJUS products. 15+ components, 150+ icons.",
+    description: "Token-first design system unifying all PJUS products. 15+ components, 150+ icons, and a token-compliance gate in the pipeline.",
     image: "/screenshots/estrada-storybook.png"
+  },
+  {
+    slug: "us-platform",
+    title: "US Platform — PJUS",
+    description: "First 100% digital precatório purchase platform in Brazil. R$5M+ revenue in 8 months.",
+    image: "/screenshots/us/area-logada.png"
   },
   {
     slug: "bosch-fleet",
@@ -28,22 +40,10 @@ export const projects = [
     image: "/screenshots/noz/admin.png"
   },
   {
-    slug: "us-platform",
-    title: "US Platform — PJUS",
-    description: "First 100% digital precatório purchase platform in Brazil. R$5M+ revenue in 8 months.",
-    image: "/screenshots/us/area-logada.png"
-  },
-  {
-    slug: null,
-    title: "Unimed",
-    description: "Virtual card, exam results, accredited network, information about the plan and allows you to request authorizations and issue invoices, among other features.",
-    image: "https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/6004933b8e0eafd47fd62667cb023152.jpg"
-  },
-  {
-    slug: "alaska",
-    title: "Alaska Asset Management App",
-    description: "Financial education MVP for Alaska Asset Management. Full course system with gamification — published on the App Store in 2020.",
-    image: "/screenshots/alaska/home.png"
+    slug: "nubank-underage",
+    title: "Nubank Underage Research",
+    description: "Qualitative UX research for Nubank in 2022. 12 teenagers, 2 cities, anthropological methods. Mapping how Gen Z relates to money, banks, and financial independence.",
+    image: "/screenshots/nubank/cover.svg"
   },
   {
     slug: "vli-desembarque",
@@ -58,16 +58,22 @@ export const projects = [
     image: "/screenshots/fieldscan/zonas-populado.png"
   },
   {
+    slug: null,
+    title: "Unimed",
+    description: "Virtual card, exam results, accredited network, information about the plan and allows you to request authorizations and issue invoices, among other features.",
+    image: "https://storage.googleapis.com/hostinger-horizons-assets-prod/533bb271-b0f3-4693-9937-b16626fc2fb3/6004933b8e0eafd47fd62667cb023152.jpg"
+  },
+  {
     slug: "tm1",
     title: "TM1 — Virtual Events Platform",
     description: "White-label virtual event platform designed during the pandemic. Live streaming, Virtual Expo, networking, and mobile-first countdown. Responsive across desktop and mobile.",
     image: "/screenshots/tm1/400-feature.png"
   },
   {
-    slug: "nubank-underage",
-    title: "Nubank Underage Research",
-    description: "Qualitative UX research for Nubank in 2022. 12 teenagers, 2 cities, anthropological methods. Mapping how Gen Z relates to money, banks, and financial independence.",
-    image: "/screenshots/nubank/cover.png"
+    slug: "alaska",
+    title: "Alaska Asset Management App",
+    description: "Financial education MVP published on the App Store in 2020. Included as a lesson: the product shipped complete, the distribution did not.",
+    image: "/screenshots/alaska/home.png"
   }
 ];
 
@@ -375,7 +381,7 @@ export const cases = [
     },
     metrics: [
       { value: '18', label: 'Initiatives shipped in 7 months' },
-      { value: '400+', label: 'Commits authored' },
+      { value: '475', label: 'Commits authored on main' },
       { value: '#2', label: 'Contributor since joining' },
       { value: '13', label: 'Pipeline stages designed for' },
       { value: '90+', label: 'Screens in the platform' },
@@ -399,6 +405,100 @@ export const cases = [
       { title: 'In big systems, design ships as code.', description: 'Owning the front-end let design decisions reach production intact — and let me iterate in days, not sprints.' },
       { title: 'AI needs a visible seam.', description: 'Users trusted AI output once they could see where each value came from and edit any of it. Transparency was the feature.' },
       { title: 'Never stop the operation.', description: 'Toggles, flags and coexisting layouts made it possible to redesign the core of a live financial operation without a single "big bang" release.' },
+    ],
+  },
+  {
+    slug: 'ai-due-diligence',
+    category: 'AI · Product Design',
+    title: 'AI Due Diligence — the model reads, the lawyer decides',
+    subtitle: 'Five AI initiatives shipped inside Opera in five months, all built on one rule: the seam between what the model suggests and what a person decides has to be visible on the screen. Document extraction at operation creation, origin badges on every field, an editable AI case study that answers 60 legal questions, an agent hub and an AI-driven UX audit.',
+    company: 'PJUS Investimentos · Opera',
+    period: 'May–Sep 2026',
+    glance: [
+      { label: 'Role', value: 'UX/UI Designer & Front-end Engineer' },
+      { label: 'Scope', value: 'AI extractor, origin badges, Case Study v2, Spalla agent hub, UX audit PoC' },
+      { label: 'Principle', value: 'Humans sign off; the model does the reading.' },
+      { label: 'Stack', value: 'Claude (Anthropic) · Hybrid RAG · OCR · .NET 10 · Razor · TypeScript' },
+    ],
+    challenge: {
+      heading: 'Hundreds of pages per credit. The same questions every time.',
+      text: 'Before a precatório is bought, a legal analyst has to answer a long list of questions about it: who the parties are, what the court decided, which risks could block the assignment, what the values are and where they come from. The answers live inside court records that run to hundreds of pages. Creating the operation meant typing data that already existed in the uploaded documents; analyzing it meant reading everything by hand.\n\nThe first AI attempt produced a long, generated report. It read well and was hard to act on: nothing in it could be edited in place, nothing pointed back to a page, and once AI started filling fields nobody could tell which values came from a person, an integration or a model.\n\nThe brief was not "add AI". It was to bring a model into a decision that moves real money without hiding where the model ends and the lawyer begins.',
+    },
+    approach: {
+      heading: 'One rule across five features: make the seam visible.',
+      text: 'Every AI feature in Opera answers three questions on the screen itself: where did this come from, can I change it, and what is the source. That turned "AI" from a black box into a reviewable draft.\n\nThe work shipped as five initiatives between May and September 2026, each behind a feature flag and each delivered as production code — Razor, TypeScript and SCSS on top of the Estrada design system — with the model work living in a dedicated AI module of the platform.\n\nThe design decisions were as much about restraint as capability: the model reads, extracts, summarizes and flags. It never signs off. The analyst edits and approves a structured study instead of writing one from scratch.',
+      pillars: [
+        {
+          icon: 'Sparkles',
+          title: 'Extract, don\'t type',
+          description: 'At operation creation, an AI extractor reads the uploaded court documents and pre-fills the form. The operator confirms data instead of re-typing it — reviewer, not typist.',
+        },
+        {
+          icon: 'ShieldCheck',
+          title: 'Origin on every field',
+          description: 'Small badges show whether a value came from a person, an integration or the model. An identity gate by CPF/CNPJ blocks pre-fill when the document belongs to someone else in the case.',
+        },
+        {
+          icon: 'Layers',
+          title: 'A structured, editable study',
+          description: 'Case Study v2 replaced the long report with 18 editable blocks, a risk gauge with severity counts, a risk modal and a verdict — on top of an engine that answers 60 legal questions per document set.',
+        },
+        {
+          icon: 'MessagesSquare',
+          title: 'One place to ask',
+          description: 'Spalla, the agent hub: a chat that routes questions to specialized agents with access to Opera data. One conversational entry point to the whole platform.',
+        },
+        {
+          icon: 'Zap',
+          title: 'AI watching the UX',
+          description: 'A proof of concept that uses an LLM to analyze user sessions and flag friction patterns in an admin tab — a continuous research signal that points where to look before anyone complains.',
+        },
+      ],
+    },
+    screens: [
+      {
+        title: 'Case Study v2 — AI reads, the lawyer decides',
+        description: 'An executive summary marked as AI, a risk gauge with severity counts, parties, status and values, and a timeline with page references back to the court record. Every block is editable and every claim points to its source, so the analyst audits instead of rewriting.',
+        image: '/screenshots/opera/case-study.jpg',
+      },
+      {
+        title: 'Risks & alerts',
+        description: 'Each risk carries a severity, the reasoning, a recommended action and the exact block and page it came from. Severity is encoded by a left border — a deliberate, documented decision so color carries meaning, not decoration.',
+        image: '/screenshots/opera/risks.jpg',
+      },
+      {
+        title: 'Origin badges',
+        description: 'Once AI started filling fields, trust had to become inspectable. Every field shows where its value came from, so reviewers know exactly which values to double-check — and which they can skip.',
+        image: '/screenshots/opera/origin-badges.jpg',
+      },
+      {
+        title: 'Spalla — the agent hub',
+        description: 'AI capabilities were spread across screens with no single place to ask the platform a question. Spalla routes a question to the right specialized agent and keeps the conversation attached to Opera data.',
+        image: '/screenshots/opera/spalla.jpg',
+      },
+    ],
+    metrics: [
+      { value: '60', label: 'Legal questions answered per analysis' },
+      { value: '18', label: 'Editable blocks in the AI case study' },
+      { value: '5', label: 'AI initiatives shipped in 5 months' },
+      { value: '100%', label: 'Of AI output editable and traceable to a source' },
+    ],
+    impact: {
+      heading: 'Trust became inspectable.',
+      text: 'Legal analysts now review a structured, AI-prepared study instead of writing one from hundreds of pages. Operators confirm extracted data instead of re-typing it. And because every AI-filled value carries its origin and points to its source page, the review is faster where the model is reliable and more careful where it is not.\n\nThe most important outcome is the pattern, not a single screen: in Opera, AI features are designed with explicit boundaries between what the model suggests and what a person decides. That rule now applies to every new AI capability the platform gains.',
+      bullets: [
+        'Document extraction at operation creation — the operator confirms instead of typing',
+        'Per-field origin badges plus an identity gate by CPF/CNPJ before any pre-fill',
+        'Case Study v2: 18 editable blocks, risk gauge and verdict over an engine answering 60 legal questions',
+        'Spalla agent hub as the single conversational entry point to the platform',
+        'LLM-based UX audit PoC turning session data into a continuous research signal',
+        'All five features shipped behind feature flags, as production code, with automated tests',
+      ],
+    },
+    learnings: [
+      { title: 'AI needs a visible seam.', description: 'Users trusted AI output once they could see where each value came from and edit any of it. Transparency was the feature.' },
+      { title: 'Reviewer, not typist.', description: 'The best AI interaction in a regulated flow is a draft someone approves — not an answer someone receives.' },
+      { title: 'Restraint is a design decision.', description: 'Deciding what the model must not do — sign off, hide its source, overwrite a human edit — mattered more than what it could do.' },
     ],
   },
   {
@@ -1233,29 +1333,35 @@ export const cases = [
 export const experiences = [
   {
     company: "PJUS",
-    period: "2022 – Present",
-    role: "Lead Product Designer",
-    description: "Allocated in PJUS, a company that buys judicial assets. I have developed most of the digital products."
+    period: "2025 – Present",
+    role: "Senior UX Designer · UX/UI + Dev",
+    description: "Hired directly by PJUS after three years as a consultant. In 2026 I joined the Opera engineering squad as the designer who ships code: 475 commits to production, 18 initiatives in seven months, AI features designed with a visible human-in-the-loop. PJUS 2025 award for conceiving the Opera MVP."
+  },
+  {
+    company: "Base2 Tecnologia · at PJUS",
+    period: "2022 – 2025",
+    role: "Senior Product Designer",
+    description: "Allocated full-time at PJUS, a fintech that buys judicial assets. Designed most of its digital products: the first 100% digital precatório platform in Brazil (R$5M+ in 8 months), the Estrada token-first design system, and the Opera MVP."
   },
   {
     company: "Sensix",
-    period: "2020 – 2022",
-    role: "Design Team Lead",
-    description: "Conducting product redesign, developing metrics, defining the UX team's OKRs, defining and validating hypotheses through quantitative and qualitative research."
+    period: "2022",
+    role: "UX Designer · Design Lead",
+    description: "Led the Fieldscan redesign: heuristic evaluation (47 issues cataloged), UX team metrics and OKRs, hypothesis validation through quantitative and qualitative research, and two new features — Management Zones and CEA mapping."
   },
   {
-    company: "Consultancies & Agencies",
-    period: "Earlier Roles",
-    role: "Product Designer",
-    description: "MVP construction, prototyping, delivering wireframes and conducting meetings with IT."
+    company: "eMotion Studios · Usemobile · ioasys",
+    period: "2017 – 2022",
+    role: "UX / Product Designer",
+    description: "Discovery, research and MVPs for clients such as Bosch (Fleet App, 30K+ downloads), VLI, Noz (10+ companies), Alaska Asset, Unimed and TM1. Qualitative research for Nubank on how Gen Z relates to money."
   }
 ];
 
 export const highlights = [
   { icon: User, title: "UX/UI Design" },
-  { icon: Award, title: "Product Metrics" },
-  { icon: Briefcase, title: "Team Leadership" },
-  { icon: MessageCircle, title: "User Journey" }
+  { icon: Sparkles, title: "AI in Product" },
+  { icon: Code2, title: "Design to Code" },
+  { icon: Award, title: "Product Metrics" }
 ];
 
 export const linkedinPosts = [

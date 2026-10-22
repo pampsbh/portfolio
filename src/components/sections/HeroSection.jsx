@@ -79,9 +79,9 @@ const HeroSection = ({ openLink, linkedinUrl }) => {
           transition={{ duration: 0.7, delay: 0.25 }}
           className="mt-10 max-w-xl text-base sm:text-lg text-ink-secondary leading-relaxed"
         >
-          Product Designer based in Belo Horizonte, working at the intersection
-          of <span className="text-ink-primary">UI craft</span>, business and data
-          to launch MVPs that move metrics — not just decks.
+          Senior Product Designer who <span className="text-ink-primary">ships code</span>.
+          Based in Belo Horizonte, I work where UI craft, business and data meet —
+          launching products that move metrics, not just decks.
         </motion.p>
 
         <motion.div
@@ -112,9 +112,9 @@ const HeroSection = ({ openLink, linkedinUrl }) => {
         >
           {[
             { value: 'R$5M+', label: 'Revenue from MVPs' },
-            { value: '8+', label: 'Years in product' },
+            { value: '475', label: 'Production commits in 2026' },
             { value: '20+', label: 'Products shipped' },
-            { value: '∞', label: 'Components in Figma' },
+            { value: '8+', label: 'Years in product' },
           ].map((stat) => (
             <div key={stat.label} className="border-l border-white/10 pl-4">
               <div className="text-2xl sm:text-3xl font-medium text-ink-primary tracking-tight">

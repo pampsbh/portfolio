@@ -18,14 +18,14 @@ const ExperienceSection = ({ experiences }) => {
           <h2 className="section-title max-w-2xl text-balance">
             Eight years across product,
             <br />
-            <span className="text-ink-secondary">research and leadership.</span>
+            <span className="text-ink-secondary">research and code.</span>
           </h2>
         </motion.div>
 
         <div className="border-t border-white/10">
           {experiences.map((exp, index) => (
             <motion.div
-              key={exp.company}
+              key={`${exp.company}-${exp.period}`}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.08 }}

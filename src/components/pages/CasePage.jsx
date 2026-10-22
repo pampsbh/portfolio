@@ -114,6 +114,8 @@ const CasePage = () => {
   }
 
   const { category, title, subtitle, company, period, glance, challenge, pipeline, approach, initiatives, timeline, process: workProcess, stack, tokens, icons, components, screens, metrics, impact, learnings } = caseData;
+  const caseIndex = cases.indexOf(caseData);
+  const nextCase = cases[(caseIndex + 1) % cases.length];
 
   const jumpLinks = [
     ['challenge', 'Challenge'],
@@ -558,8 +560,14 @@ const CasePage = () => {
         <div className="border-t border-white/5">
           <div className="max-w-4xl mx-auto px-6 py-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div>
-              <p className="text-sm text-ink-muted font-mono mb-1">Next</p>
-              <p className="text-ink-secondary text-sm">More cases coming soon</p>
+              <p className="text-sm text-ink-muted font-mono mb-1">Next case</p>
+              <Link
+                to={`/case/${nextCase.slug}`}
+                className="text-ink-primary text-base font-medium hover:text-accent transition-colors inline-flex items-center gap-2 group"
+              >
+                {nextCase.title}
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
             </div>
             <Link to="/" className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors group">
               Back to portfolio

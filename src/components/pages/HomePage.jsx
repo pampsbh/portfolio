@@ -33,16 +33,16 @@ const HomePage = () => {
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:igorvilaralmeida@gmail.com';
+    window.location.href = 'mailto:igorvilaralmeida@gmail.com?subject=' + encodeURIComponent('Contact via igorvilar.com.br');
   };
 
   return (
     <>
       <Helmet>
-        <title>Igor Vilar - Product Designer</title>
+        <title>Igor Vilar — Senior Product Designer</title>
         <meta
           name="description"
-          content="Product Designer focused on launching MVPs that move metrics. UI craft, research and data — based in Belo Horizonte."
+          content="Senior Product Designer who ships code. Four years designing fintech products at PJUS: a 100% digital precatório platform (R$5M+ in 8 months), the Estrada design system and the Opera operations platform, with AI features built around a visible human-in-the-loop."
         />
         <meta name="theme-color" content="#0A0A0A" />
       </Helmet>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, ArrowUpRight, Copy, Check } from 'lucide-react';
+import { Mail, Linkedin, ArrowUpRight, Copy, Check, FileText, Download } from 'lucide-react';
 
 const ContactSection = ({ openLink, handleEmail, linkedinUrl }) => {
   const [copied, setCopied] = React.useState(false);
@@ -83,6 +83,33 @@ const ContactSection = ({ openLink, handleEmail, linkedinUrl }) => {
             </div>
             <div className="text-base text-ink-primary truncate">{email}</div>
           </button>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto"
+        >
+          {[
+            { href: '/cv/CV-Igor-Vilar-EN.pdf', label: 'Resume · English', note: 'PDF · 1 page' },
+            { href: '/cv/CV-Igor-Vilar.pdf', label: 'Currículo · Português', note: 'PDF · 1 página' },
+          ].map((cv) => (
+            <a
+              key={cv.href}
+              href={cv.href}
+              download
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-panel hover:border-accent/40 transition-all duration-300 p-6 text-left"
+            >
+              <div className="flex items-start justify-between mb-8">
+                <FileText className="w-5 h-5 text-ink-secondary group-hover:text-accent transition-colors" strokeWidth={1.5} />
+                <Download className="w-4 h-4 text-ink-muted group-hover:text-accent transition-colors" />
+              </div>
+              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted mb-1">{cv.note}</div>
+              <div className="text-base text-ink-primary">{cv.label}</div>
+            </a>
+          ))}
         </motion.div>
       </div>
     </section>
