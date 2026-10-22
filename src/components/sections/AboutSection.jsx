@@ -31,15 +31,18 @@ const AboutSection = ({ highlights }) => {
             className="lg:col-span-7 space-y-6"
           >
             <p className="text-lg text-ink-secondary leading-relaxed">
-              I&apos;m a Product Designer with a background in Computer Science and two MBAs.
-              My work sits where <span className="text-ink-primary">research, data and UI</span> overlap —
+              I&apos;m a Senior Product Designer with a background in Computer Science, an MBA in
+              project management and a postgraduate degree in UX. My work sits where{' '}
+              <span className="text-ink-primary">research, data, UI and code</span> overlap —
               I treat interfaces as products, not screens.
             </p>
             <p className="text-lg text-ink-secondary leading-relaxed">
-              For the last 2 years I&apos;ve been leading design on a fintech product that buys
-              judicial assets. The product alone generated{' '}
-              <span className="text-ink-primary">+R$5M in revenue</span>, and the company crossed
-              R$500M.
+              For the last 4 years I&apos;ve designed most of the digital products at PJUS, a fintech
+              that buys judicial assets. The MVP I designed generated{' '}
+              <span className="text-ink-primary">+R$5M in revenue</span> and the company crossed
+              R$500M. In 2026 I joined the Opera engineering squad to ship what I design:{' '}
+              <span className="text-ink-primary">475 commits to production</span>, from UI to
+              domain rules, with AI features built around a visible human-in-the-loop.
             </p>
 
             <div className="grid grid-cols-2 gap-px bg-white/5 border border-white/10 rounded-xl overflow-hidden mt-10">
