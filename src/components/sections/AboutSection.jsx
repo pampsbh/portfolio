@@ -40,7 +40,7 @@ const AboutSection = ({ highlights }) => {
               For the last 4 years I&apos;ve designed most of the digital products at PJUS, a fintech
               that buys judicial assets. The MVP I designed generated{' '}
               <span className="text-ink-primary">+R$5M in revenue</span> and the company crossed
-              R$500M. In 2026 I joined the Opera engineering squad to ship what I design:{' '}
+              R$500M. In 2026 I joined an internal platform's engineering squad to ship what I design:{' '}
               <span className="text-ink-primary">475 commits to production</span>, from UI to
               domain rules, with AI features built around a visible human-in-the-loop.
             </p>

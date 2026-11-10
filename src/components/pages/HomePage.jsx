@@ -42,7 +42,7 @@ const HomePage = () => {
         <title>Igor Vilar — Senior Product Designer</title>
         <meta
           name="description"
-          content="Senior Product Designer who ships code. Four years designing fintech products at PJUS: a 100% digital precatório platform (R$5M+ in 8 months), the Estrada design system and the Opera operations platform, with AI features built around a visible human-in-the-loop."
+          content="Senior Product Designer who ships code. Four years designing fintech products at PJUS: a 100% digital precatório platform (R$5M+ in 8 months), the Estrada design system and an internal operations platform, with AI features built around a visible human-in-the-loop."
         />
         <meta name="theme-color" content="#0A0A0A" />
       </Helmet>

@@ -47,7 +47,8 @@ Secrets necessários no GitHub (`github.com/pampsbh/portfolio → Settings → S
 - API token: variável de ambiente `FIGMA_TOKEN` (não commitar)
 
 ## Cases de portfólio
-- `/case/opera` → Opera, plataforma de operações (PJUS). É o case mais completo e usa as seções opcionais `glance`, `pipeline`, `initiatives` (filtráveis), `timeline`, `process`, `stack` e `learnings` do `CasePage`
+- `/case/operations-platform` → plataforma interna de operações (versão genérica, sem nome "Opera", sem prints/dados reais — PJUS não autoriza expor inteligência de mercado). Usa as seções opcionais `initiatives` (filtráveis), `process` e `stack`
+- `/case/ai-human-in-the-loop` → IA com fronteira visível (genérico, mesmo critério de confidencialidade)
 - `/case/design-system` → Estrada Design System (PJUS)
 - `/case/us-platform` → US Platform (PJUS)
 
